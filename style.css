@@ -2,6 +2,7 @@ main {
     margin-top: 70px; 
 }
 
+/* Navigation Bar */
 nav {
     background-color: #EE4D2D;
     position: fixed;
@@ -44,3 +45,28 @@ a:hover {
     background-position: center;
     background-size: cover;
 }
+
+/* Slider */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.slider-container {
+    width: 60%;
+    margin: auto;
+    border: 5px solid black;
+}
+
+.slider {
+    display: flex;
+    width: 100%;
+    height: 500px;
+}
+
+.slider img {
+    width: 100%;
+    min-width: 100%; /* Ensure images take up the full width */
+}
+
