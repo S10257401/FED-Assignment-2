@@ -43,7 +43,7 @@ a:hover {
     color: #ff2353; 
 }
 
-/* slider start*/
+
 
 /* Product Category section */
 
@@ -57,6 +57,7 @@ a:hover {
     justify-content: space-around;
     gap: 0px;
     padding: 20px;
+    
 }
 
 .Product-Category-Container {
@@ -97,7 +98,9 @@ a:hover {
     margin-bottom: 10px; /* Adjust the bottom margin as needed */
 }
 
-.container{
+/* slider start*/
+
+.Slider-container{
     width: 80%;
     height: 100vh;
     background: #ffffff;
@@ -127,3 +130,4 @@ a:hover {
 }
 
 /* slider end*/
+
