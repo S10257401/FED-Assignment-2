@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <title>Shopee website</title>
+    
+    <title>eShop website</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 </head>
 <body>
     <nav>
@@ -22,19 +24,36 @@
     </nav>
 
     
-    <div class="slider-container">
-        <div class="slider">
-            <img src="eShop Sale Ad 2.jpg" id="lastClone" alt="Image 2">
-            <img src="eShop Sale Ad 1.jpg" alt="Image 1">
-            <img src="eShop Sale Ad 2.jpg" alt="Image 2">
-            <img src="eShop Sale Ad 1.jpg" id="firstClone" alt="Image 1">
-            
+   <div class="container">
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide"> <img src="images/eShop1.png"> </div>
+          <div class="swiper-slide"> <img src="images/eShop2.png"> </div>
+          <div class="swiper-slide"> <img src="images/eShop3.png"> </div>
+          
+
         </div>
-    </div>
 
-    <button id="prevBtn">Prev</button>
-    <button id="nextBtn">Next</button>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+      
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      
+        
+      </div>
 
+
+   </div>
+
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  
+</script>
+<script src="script.js"></script>
 
 </body>
 </html>
