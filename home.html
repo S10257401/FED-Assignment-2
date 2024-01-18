@@ -4,66 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <title>Shopee website</title>
+    
+    <title>eShop website</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 </head>
 <body>
+    <nav>
+        <ul>
+            <li class="active"><a href="#">Home</a></li>            
+            <li><a href="products.html">Products</a></li>
+            <li><a href="vouchers.html">Vouchers</a></li>
+            <li><a href="games.html">Games</a></li>
+            <li class="search-bar">
+                <input type="text" placeholder="Search">
+                <button type="button">Go</button>
+            </li>
+        </ul>
+    </nav>
 
-    <section id="First-Section">
-        <nav>
-            <ul>
-                <li class="active"><a href="#">Home</a></li>            
-                <li><a href="products.html">Products</a></li>
-                <li><a href="vouchers.html">Vouchers</a></li>
-                <li><a href="games.html">Games</a></li>
-                <li class="search-bar">
-                    <input type="text" placeholder="Search">
-                    <button type="button">Go</button>
-                </li>
-            </ul>
-        </nav>
-</section>
-
-    <section id="Third-Section">
-        <div class="Product-Category-Container">
-            <div class="Flex-Category">
-                <img src="Computer and Peripherals Catergory.jpg" alt="Image of Computer" class="product-category-photos">
-            </div>
-            <div class="Category-Name">
-                <h4>Computer and Peripherals</h4>
-            </div>
-        </div>
-
-        <div class="Product-Category-Container">
-            <div class="Flex-Category">
-                <img src="Home and Living Category.png" alt="Image of Furniture" class="product-category-photos">
-            </div>
-            <div class="Category-Name">
-                <h4>Home and Living</h4>
-            </div>
-        </div>
-
-        <div class="Product-Category-Container">
-            <div class="Flex-Category">
-                <img src="Watches Category.jpg" alt="Image of Watch" class="product-category-photos">
-            </div>
-            <div class="Category-Name">
-                <h4>Watches</h4>
-            </div>
-        </div>
-
-        <div class="Product-Category-Container">
-            <div class="Flex-Category">
-                <img src="Shoes Category.jpg" alt="Image of Shoes" class="product-category-photos">
-            </div>
-            <div class="Category-Name">
-                <h4>Shoes</h4>
-            </div>
-        </div>
-
-    </section>
     
+    <div class="slider-container">
+        <div class="slider">
+            <img src="eShop Sale Ad 2.jpg" id="lastClone" alt="Image 2">
+            <img src="eShop Sale Ad 1.jpg" alt="Image 1">
+            <img src="eShop Sale Ad 2.jpg" alt="Image 2">
+            <img src="eShop Sale Ad 1.jpg" id="firstClone" alt="Image 1">
+            
+        </div>
+    </div>
 
+    <button id="prevBtn">Prev</button>
+    <button id="nextBtn">Next</button>
+
+  
+</script>
+<script src="script.js"></script>
 
 </body>
 </html>
