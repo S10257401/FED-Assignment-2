@@ -129,5 +129,65 @@ a:hover {
     background: #ffffff;
 }
 
-/* slider end*/
+/* Fifth Section */
+#Fifth-Section {
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.Footer-Section {
+    display: flex;
+}
+
+.Modes-Of-Payment,
+.Logistic-Options {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.payment-heading,
+.logistic-heading {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.payment-logos,
+.logistic-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.payment-logos::before,
+.payment-logos::after,
+.logistic-logos::before,
+.logistic-logos::after {
+    content: "";
+    position: absolute;
+    height: 300%;
+    width: 2px;
+    background-color: #000;
+}
+
+.payment-logos::before,
+.logistic-logos::before {
+    left: -5px;
+}
+
+.payment-logos::after,
+.logistic-logos::after {
+    right: -5px;
+}
+
+.payment-logo,
+.logistic-logo {
+    width: 50px;
+    height: auto;
+    margin: 0 10px;
+}
