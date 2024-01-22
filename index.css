@@ -83,6 +83,12 @@ a:hover {
 
 /* Product Category section */
 
+.Product-Category-Heading {
+    font-size: 18px; /* Add 'px' to specify font size */
+    text-align: left; /* Center the heading */
+    padding-left: 315px;
+}
+
 #Third-Section {
     display: flex;
     width: 90%;
@@ -93,6 +99,7 @@ a:hover {
     justify-content: space-around;
     gap: 0px;
     padding: 20px;
+    margin-top: -40px;
 }
 
 .Product-Category-Container {
@@ -237,4 +244,8 @@ a:hover {
 
 .Socials a:hover {
     opacity: 0.4; 
+}
+
+.Shopee-QR-Code {
+    font-size: 18px;
 }
