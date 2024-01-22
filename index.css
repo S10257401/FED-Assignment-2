@@ -87,6 +87,8 @@ a:hover {
     font-size: 18px; /* Add 'px' to specify font size */
     text-align: left; /* Center the heading */
     padding-left: 315px;
+    margin-top: 80px;
+
 }
 
 #Third-Section {
@@ -173,6 +175,13 @@ a:hover {
 .swiper .swiper-pagination-bullet-active{
     background: #ffffff;
 }
+/* Orange divider*/
+.Orange-Line {
+    width: 100%;
+    border: 2px solid #EE4D2D;
+    margin: 20px auto;    
+}
+
 
 /* Fifth Section */
 #Fifth-Section {
