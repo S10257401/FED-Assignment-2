@@ -133,26 +133,33 @@ a:hover {
 #Fifth-Section {
     height: 40vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .Footer-Section {
     display: flex;
+    flex-wrap: wrap; /* Allow child elements to wrap to the next line */
 }
 
 .Modes-Of-Payment,
 .Logistic-Options {
-    position: relative;
-    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 20px; /* Adjust this value as needed for the spacing */
+    margin-left: 80px; /* Adjust this value to increase lateral space */
+    margin-right: 80px; /* Adjust this value to increase lateral space */
 }
 
-.payment-heading,
+.payment-heading {
+    margin-bottom: 10px; /* Adjust this value as needed for the spacing */
+    text-align: center;
+}
+
 .logistic-heading {
-    margin-bottom: 30px;
+    margin-bottom: 30px; /* Adjust this value as needed for the spacing */
     text-align: center;
 }
 
@@ -161,33 +168,35 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-}
-
-.payment-logos::before,
-.payment-logos::after,
-.logistic-logos::before,
-.logistic-logos::after {
-    content: "";
-    position: absolute;
-    height: 300%;
-    width: 2px;
-    background-color: #000;
-}
-
-.payment-logos::before,
-.logistic-logos::before {
-    left: -5px;
-}
-
-.payment-logos::after,
-.logistic-logos::after {
-    right: -5px;
+    flex-wrap: wrap; /* Allow logos to wrap to the next line if needed */
 }
 
 .payment-logo,
 .logistic-logo {
-    width: 50px;
+    width: 80px; /* Set the desired width for both payment and logistics logos */
     height: auto;
-    margin: 0 10px;
+    margin: 0 10px 10px 0px; /* Adjust the last value for bottom margin */
+}
+
+/* Additional styles for better alignment */
+.Logistic-Options {
+    margin-top: 20px; /* Adjust this value for spacing between payment and logistics sections */
+}
+
+.Socials {
+    align-items: center;
+    padding-top: 0px;
+    text-align: center;
+}
+
+.Socials a {
+    text-decoration: none; 
+    margin: 20px;    
+    color: black;
+    opacity: 1; 
+    transition: opacity 0.4s ease; 
+}
+
+.Socials a:hover {
+    opacity: 0.4; 
 }
