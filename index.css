@@ -43,6 +43,26 @@ a:hover {
     color: #ff2353; 
 }
 
+/* Second Section */
+#Second-Section {
+    /* Add any specific styles for the second section if needed */
+}
+
+.Slider-container {
+    width: 60%; /* Adjust the width of the slider container as needed */
+    margin: 0 auto; /* Center the slider container horizontally */
+}
+
+.swiper {
+    width: 100%; /* Set the width of the slider to 100% of the container */
+    max-width: 1200px; /* Set a maximum width for the slider if needed */
+    margin: 0 auto; /* Center the slider horizontally */
+}
+
+.swiper-slide img {
+    width: 100%; /* Make sure the images inside the slider take the full width */
+    height: auto; /* Maintain the aspect ratio of the images */
+}
 
 
 /* Product Category section */
@@ -69,7 +89,7 @@ a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 2px solid grey;
+    border: 2px solid lightgrey;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
