@@ -53,7 +53,8 @@ a:hover {
     justify-content: space-around;
     gap: 0px;
     padding: 20px;
-    
+    margin-top: 100px;
+        
 }
 
 .Product-Category-Container {
@@ -65,7 +66,7 @@ a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 2px solid grey;
+    border: 1px solid grey;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -92,4 +93,38 @@ a:hover {
     font-weight: bold;
     font-size: 1.2em;
     margin-bottom: 10px; /* Adjust the bottom margin as needed */
+}
+
+#Product-Section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 200px; /* Adjust the top margin as needed */
+}
+
+.Product-Container {
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.Product-Item {
+    flex-basis: 22%;
+    padding: 10px;
+    border: 2px solid grey;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.Product-Item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
 }
