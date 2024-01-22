@@ -65,8 +65,34 @@
         </div>         
     </section>
 
+    <div class="filter-container">
+        <label for="categoryFilter">Filter by Category:</label>
+        <select id="categoryFilter" onchange="filterItems()">
+            <option value="all">All</option>
+            <option value="computer and peripherals">Computer and Peripherals</option>
+            <option value="home and living">Home and Living</option>
+            <option value="watches">Watches</option>
+            <option value="shoes">Shoes</option>
+            <option value="fashion">Fashion</option>
+            <option value="others">Others</option>
+        </select>
+    </div>
+
+
+    <!--reference-->
+    <!--<div class="flex-item" data-category="shirts">
+			<div class="flex-img">
+				<img src="images/AzDQEseS_360x.webp">
+            </div>
+            <div class="flex-info">
+                <h4>Ricky Tee - Black</h4>
+                <p>$30.00</p>
+                <button class="addToCartButton" onclick="addToCart('product1', 'Ricky Tee - Black', 30.00)">Add to Cart</button>
+            </div>
+        </div>
+-->
     <section id="Product-Section">
-        <div class="Product-Container">
+        <div class="Product-Container" data-category="shirts">
             <div class="Product-Item">
                 <img src="productimg/smartwatch.jpeg" alt="Product 1">
                 <h4>Smart Watch</h4>
