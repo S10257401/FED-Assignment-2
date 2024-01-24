@@ -60,9 +60,6 @@
                     <div class="swiper-slide"> <img src="images/Shelves.jpg"> </div>  
                     <div class="swiper-slide"> <img src="images/Razer Hunstman Mini KeyBoard.jpg"></div> 
                     <div class="swiper-slide"> <img src="images/Watch.jpg"></div> 
-                    
-                                 
-
                     </div>
 
                     <!--Pagination-->
@@ -70,60 +67,69 @@
                 
                     <!--Navigation buttons -->
                     <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                            
+                    <div class="swiper-button-next"></div> 
                 </div>
             </div>
         </div>   
     </section>
 
-    <div class="Product-Category-Heading"><h1>Product Categories</h1></div>
-    <section id="Third-Section">
-        <div class="Product-Category-Container">
-            <div class="Flex-Category">
-                <img src="productcat/Computer and Peripherals Category.jpg" alt="Image of Computer" class="product-category-photos">
-            </div>
-            <div class="Category-Name">
-                <h4>Computer and Peripherals</h4>
-            </div>
+    <!-- Product Categories Section -->
+<div class="Product-Category-Heading">
+    <h1>Product Categories</h1>
+</div>
+<section id="Third-Section">
+    <!-- Computer and Peripherals -->
+    <div class="Product-Category-Container" onclick="openProductPage('computer_and_peripherals')">
+        <div class="Flex-Category">
+            <img src="productcat/Computer and Peripherals Category.jpg" alt="Image of Computer" class="product-category-photos">
         </div>
+        <div class="Category-Name">
+            <h4>Computer and Peripherals</h4>
+        </div>
+    </div>
 
-        <div class="Product-Category-Container">
-            <div class="Flex-Category">
-                <img src="productcat/Home and Living Category.png" alt="Image of Furniture" class="product-category-photos">
-            </div>
-            <div class="Category-Name">
-                <h4>Home and Living</h4>
-            </div>
+    <!-- Home and Living -->
+    <div class="Product-Category-Container" onclick="openProductPage('home_and_living')">
+        <div class="Flex-Category">
+            <img src="productcat/Home and Living Category.png" alt="Image of Furniture" class="product-category-photos">
         </div>
+        <div class="Category-Name">
+            <h4>Home and Living</h4>
+        </div>
+    </div>
 
-        <div class="Product-Category-Container">
-            <div class="Flex-Category">
-                <img src="productcat/Watches Category.jpg" alt="Image of Watch" class="product-category-photos">
-            </div>
-            <div class="Category-Name">
-                <h4>Watches</h4>
-            </div>
+    <!-- Watches -->
+    <div class="Product-Category-Container" onclick="openProductPage('watches')">
+        <div class="Flex-Category">
+            <img src="productcat/Watches Category.jpg" alt="Image of Watch" class="product-category-photos">
         </div>
+        <div class="Category-Name">
+            <h4>Watches</h4>
+        </div>
+    </div>
 
-        <div class="Product-Category-Container">
-            <div class="Flex-Category">
-                <img src="productcat/Shoes Category.jpg" alt="Image of Shoes" class="product-category-photos">
-            </div>
-            <div class="Category-Name">
-                <h4>Shoes</h4>
-            </div>
+    <!-- Shoes -->
+    <div class="Product-Category-Container" onclick="openProductPage('shoes')">
+        <div class="Flex-Category">
+            <img src="productcat/Shoes Category.jpg" alt="Image of Shoes" class="product-category-photos">
         </div>
+        <div class="Category-Name">
+            <h4>Shoes</h4>
+        </div>
+    </div>
 
-        <div class="Product-Category-Container">
-            <div class="Flex-Category">
-                <img src="productcat/Fashion Category.jpg" alt="Image of Clothes" class="product-category-photos">
-            </div>
-            <div class="Category-Name">
-                <h4>Fashion</h4>
-            </div>
+    <!-- Fashion -->
+    <div class="Product-Category-Container" onclick="openProductPage('fashion')">
+        <div class="Flex-Category">
+            <img src="productcat/Fashion Category.jpg" alt="Image of Clothes" class="product-category-photos">
         </div>
-    </section>
+        <div class="Category-Name">
+            <h4>Fashion</h4>
+        </div>
+    </div>
+</section>
+
+  </section>
 
     <section id="FourthSection">
         <p>Product Display section</p>
@@ -183,11 +189,6 @@
     </section>
     
     
-    
-   
-   
-
-  
 
 
 </body>
