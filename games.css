@@ -42,3 +42,7 @@ a {
 a:hover {
     color: #ff2353; 
 }
+
+.Games-Page-Header {
+    text-align: center;
+}

@@ -69,3 +69,4 @@ if (category && layout) {
           document.getElementById('productContent').innerHTML = `<p>Default Content for ${category} Goes Here</p>`;
   }
 }
+
