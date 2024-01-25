@@ -24,7 +24,7 @@ function filterItems() {
   const categoryFilter = document.getElementById('categoryFilter');
   const selectedCategory = categoryFilter.value;
   
-  const items = document.querySelectorAll('.flex-item');
+  const items = document.querySelectorAll('.Product-Item');
 
   items.forEach(item => {
       const category = item.dataset.category.toLowerCase();
@@ -38,7 +38,6 @@ function filterItems() {
 }
 
 
-
 // Linking the Product Categories on the Home Page to the Respective Pages on the Product Page
 function openProductPage(category) {
   // Construct the URL with the category and a fragment identifier
@@ -46,27 +45,27 @@ function openProductPage(category) {
   window.location.href = url;
 }
 
-// Get the category and layout from the URL parameters
-const urlParams = new URLSearchParams(window.location.search);
-const category = urlParams.get('category');
-const layout = urlParams.get('layout');
 
-// Load content based on category and layout
-if (category && layout) {
-  // Use category and layout to determine which content to load
-  switch (layout) {
-      case 'layout1':
-          // Load content for layout 1
-          document.getElementById(`${category}_content`).innerHTML = `<p>Content for ${category} in Layout 1 Goes Here</p>`;
-          break;
-      case 'layout2':
-          // Load content for layout 2
-          document.getElementById('productContent').innerHTML = `<p>Content for ${category} in Layout 2 Goes Here</p>`;
-          break;
-      // Add more cases for additional layouts
-      default:
-          // Default layout
-          document.getElementById('productContent').innerHTML = `<p>Default Content for ${category} Goes Here</p>`;
-  }
+
+// Linking the Product Categories on the Home Page to the Product Page
+function getParameterByName(name, url) {
+  if (!url) url = window.location.href;
+  name = name.replace(/[\[\]]/g, '\\$&');
+  var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+      results = regex.exec(url);
+  if (!results) return null;
+  if (!results[2]) return '';
+  return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+// Read the 'filter' parameter from the URL
+var filterValue = getParameterByName('filter');
+
+// Apply filter based on the value
+if (filterValue) {
+  // Your code to apply the filter based on the 'filterValue'
+  console.log('Applying filter:', filterValue);
+  // For example, you can highlight the selected filter option
+  document.getElementById(filterValue).classList.add('selected');
 }
 
