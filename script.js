@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 })
 
+// Dropdown Filter For Product Page 
 function filterItems() {
   const categoryFilter = document.getElementById('categoryFilter');
   const selectedCategory = categoryFilter.value;
@@ -37,33 +38,18 @@ function filterItems() {
 }
 
 // Linking the Product Categories on the Home Page to the Respective Pages on the Product Page
-function openProductPage(category) {
-  // Construct the URL with the category and a fragment identifier
-  const url = `products.html?category=${category}#${category}_content`;
-  window.location.href = url;
-}
+function filterItems() {
+  // Get the selected category from the dropdown
+  var categoryFilter = document.getElementById("Category-Name");
+  var selectedCategory = categoryFilter.value;
 
-
-
-// Linking the Product Categories on the Home Page to the Product Page
-function getParameterByName(name, url) {
-  if (!url) url = window.location.href;
-  name = name.replace(/[\[\]]/g, '\\$&');
-  var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-      results = regex.exec(url);
-  if (!results) return null;
-  if (!results[2]) return '';
-  return decodeURIComponent(results[2].replace(/\+/g, ' '));
-}
-
-// Read the 'filter' parameter from the URL
-var filterValue = getParameterByName('filter');
-
-// Apply filter based on the value
-if (filterValue) {
-  // Your code to apply the filter based on the 'filterValue'
-  console.log('Applying filter:', filterValue);
-  // For example, you can highlight the selected filter option
-  document.getElementById(filterValue).classList.add('selected');
-}
-
+  // Check if a category is specified
+  if (selectedCategory === "all") {
+      console.log('all categories selected');
+      // Handle the case where "All" is selected (show all items)
+  } if (selectedCategory === "computer and peripherals") {
+      console.log('computer and peripherals:', selectedCategory);
+      // Use the selected category to filter or display relevant items
+      // For demonstration purposes, let's just log it to the console.
+  }
+}z
