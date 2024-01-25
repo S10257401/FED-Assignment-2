@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
 main {
     margin-top: 70px; 
 }
@@ -6,7 +9,7 @@ main {
 #First-Section {
     padding: 10px;
     align-items: center;
-    margin-top: 150px;
+    margin-top: 250px;
 }
 
 nav {
@@ -16,13 +19,19 @@ nav {
     left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 35px 0;
+    padding: 10px;
+    font-family: "Poppins",sans-serif;   
+    height: 135px;
 }
+
 
 ul {
     list-style: none;
     margin: 0;
     display: flex; 
+    margin-top: -23px;
+    margin-left: 0;
+    align-items: center;
     
 }
 
@@ -40,7 +49,15 @@ a {
 }
 
 a:hover {
-    color: #ff2353; 
+    color: #ffffff;
+     
+
+}
+
+#First-Section img {
+    width: 200px;    
+    cursor: pointer; 
+
 }
 
 #Second-Section {
