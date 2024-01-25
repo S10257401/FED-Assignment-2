@@ -19,12 +19,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 })
 
-// Filter Function On Product Page
 function filterItems() {
   const categoryFilter = document.getElementById('categoryFilter');
   const selectedCategory = categoryFilter.value;
   
-  const items = document.querySelectorAll('.Product-Item');
+  const items = document.querySelectorAll('.flex-item');
 
   items.forEach(item => {
       const category = item.dataset.category.toLowerCase();
@@ -36,7 +35,6 @@ function filterItems() {
       }
   });
 }
-
 
 // Linking the Product Categories on the Home Page to the Respective Pages on the Product Page
 function openProductPage(category) {

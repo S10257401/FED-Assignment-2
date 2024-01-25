@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="products.css">
+    <script src="script.js"></script>
     <title>Shopee website</title>
 </head>
 <body>
@@ -82,21 +83,33 @@
         </select>
     </div>
 
-    <section id="Product-Section">
+    <section class="container">
+		<div class="flex-item" data-category="computer and peripherals">
+			<div class="flex-img">
+				<img src="images/Razer Hunstman Mini KeyBoard.jpg">
+            </div>
+            <div class="flex-info">
+                <h4>Razer Hunstman Mini - Black</h4>
+                <p>$189.00</p>
+                <button class="addToCartButton" onclick="addToCart('product1', 'Ricky Tee - Black', 30.00)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="flex-item" data-category="home and living">
+			<div class="flex-img">
+				<img src="images/Shelves.jpg">
+            </div>
+            <div class="flex-info">
+                <h4>Shelves</h4>
+                <p>$99.00</p>
+                <button class="addToCartButton" onclick="addToCart('product1', 'Ricky Tee - Black', 30.00)">Add to Cart</button>
+            </div>
+        </div>
 
         
-            <div class="Product-Item">
-                <img src="productimg/shoe.jpeg" alt="Product 1">
-                <h4>Casual Shoe</h4>
-                <p>$49.99</p>
-                <button>Add to Cart</button>
-            </div>
-
-            
+        
 
             <!-- Repeat similar blocks for other products -->
-
-        </div>
     </section>
    
 </body>

@@ -120,36 +120,69 @@ a:hover {
     margin-bottom: 10px;
 }
 
-#Product-Section {
+/* Displaying of  Products */
+.container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
-    padding: 20px;
-    margin-top: 200px; /* Adjust the top margin as needed */
-}
-
-.Product-Container {
     width: 90%;
     max-width: 1300px;
     margin: 0 auto;
     background-color: #FFFFFF;
-    display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 20px;
+    gap: 10px;
+    padding: 20px;
 }
 
-.Product-Item {
-    flex-basis: 22%;
-    padding: 10px;
-    border: 2px solid grey;
+.flex-item {
+    padding: 0px; /* Adjust the padding as needed */
+    flex-grow: 0.3;
+    height: 500px;
+    flex-basis: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000000;
+    margin: 0.5%; /* Adjust the margin as needed */
     box-sizing: border-box;
-    text-align: center;
 }
 
-.Product-Item img {
-    max-width: 100%;
+.flex-img {
+    max-width: 250px;
+    max-height: 250px; /* Set a maximum height for the image */
     height: auto;
-    margin-bottom: 10px;
+    transition: transform 0.3s;
+    margin-top: 60px;
+   
+}
+
+.flex-item:hover {
+    transform: scale(1.01);
+}
+
+.flex-info {
+    text-align: center;
+    margin-top: auto;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 45px; /* Adjust the bottom margin as needed */
+}
+
+@media (max-width: 920px) {
+    .flex-item {
+        flex: 0 45%;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+.addToCartButton {
+    background-color: #173b4b;
+    color: #FFFFFF;
+    border: none; /* Remove button outline */
+    margin-top: px; /* Adjust the top margin as needed */
+    border-radius: 20px;
+    padding: 8px;
 }
