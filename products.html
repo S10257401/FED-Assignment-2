@@ -20,55 +20,7 @@
         </nav>
     </section>
     
-    <div class="Product-Category-Heading-2"><h1>Products</h1></div>
-
-
-    <section id="Second-Section">       
-        <div class="Product-Category-Container">
-            <div class="Flex-Category">
-                <img src="productcat/Computer and Peripherals Category.jpg" alt="Image of Computer" class="product-category-photos">
-            </div>
-            <div class="Category-Name">
-                <h4>Computer and Peripherals</h4>
-            </div>
-        </div>
-
-        <div class="Product-Category-Container">
-            <div class="Flex-Category">
-                <img src="productcat/Home and Living Category.png" alt="Image of Furniture" class="product-category-photos">
-            </div>
-            <div class="Category-Name">
-                <h4>Home and Living</h4>
-            </div>
-        </div>
-
-        <div class="Product-Category-Container">
-            <div class="Flex-Category">
-                <img src="productcat/Watches Category.jpg" alt="Image of Watch" class="product-category-photos">
-            </div>
-            <div class="Category-Name">
-                <h4>Watches</h4>
-            </div>
-        </div>
-
-        <div class="Product-Category-Container">
-            <div class="Flex-Category">
-                <img src="productcat/Shoes Category.jpg" alt="Image of Shoes" class="product-category-photos">
-            </div>
-            <div class="Category-Name">
-                <h4>Shoes</h4>
-            </div>
-        </div>
-
-        <div class="Product-Category-Container">
-            <div class="Flex-Category">
-                <img src="productcat/Fashion Category.jpg" alt="Image of Clothes" class="product-category-photos">
-            </div>
-            <div class="Category-Name">
-                <h4>Fashion</h4>
-            </div>
-        </div>         
-    </section>
+    <div class="Product-Category-Heading"><h1>Products</h1></div>
 
     <div class="filter-container">
         <label for="categoryFilter">Filter by Category:</label>
@@ -102,6 +54,39 @@
             <div class="flex-info">
                 <h4>Shelves</h4>
                 <p>$99.00</p>
+                <button class="addToCartButton" onclick="addToCart('product1', 'Ricky Tee - Black', 30.00)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="flex-item" data-category="fashion">
+			<div class="flex-img">
+				<img src="images/Clothes.jpg">
+            </div>
+            <div class="flex-info">
+                <h4>Classic Band Shirt</h4>
+                <p>$25.00</p>
+                <button class="addToCartButton" onclick="addToCart('product1', 'Ricky Tee - Black', 30.00)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="flex-item" data-category="computer and peripherals">
+			<div class="flex-img">
+				<img src="images/Logitech Gpro Superlight.jpg">
+            </div>
+            <div class="flex-info">
+                <h4>Logitech GPro X Superlight</h4>
+                <p>$229.00</p>
+                <button class="addToCartButton" onclick="addToCart('product1', 'Ricky Tee - Black', 30.00)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="flex-item" data-category="watches">
+			<div class="flex-img">
+				<img src="images/Watch.jpg">
+            </div>
+            <div class="flex-info">
+                <h4>Smart Watch</h4>
+                <p>$120.00</p>
                 <button class="addToCartButton" onclick="addToCart('product1', 'Ricky Tee - Black', 30.00)">Add to Cart</button>
             </div>
         </div>

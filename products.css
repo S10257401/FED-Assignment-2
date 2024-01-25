@@ -60,64 +60,17 @@ a:hover {
 
 }
 
-#Second-Section {
-    display: flex;
-    width: 90%;
-    max-width: 1300px;
-    margin: 0 auto;
-    background-color: #FFFFFF;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 0px;
-    padding: 20px;
-    margin-top: 40px;
-        
-}
-
-.Product-Category-Heading-2 {
+.Product-Category-Heading {
     font-size: 18px; /* Add 'px' to specify font size */
     text-align: center; /* Center the heading */
     margin-bottom: 20px;
 }
 
-.Product-Category-Container {
-    padding: 1%;
-    flex-grow: 2;
-    height: auto;
-    flex-basis: 18%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid lightgrey;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    margin-top: 20px; /* Adjust the top margin as needed */
-}
-
-.Flex-Category {
-    max-width: 80%;
-    height: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.Flex-Category img {
-    max-width: 80%;
-    max-height: 80%;
-    object-fit: contain;
-    margin-top: 20px;
-}
-
-.Category-Name {
-    text-align: center;
-    margin-top: -60px; /* Adjust the top margin as needed */
-    font-weight: bold;
-    font-size: 1.2em;
-    margin-bottom: 10px;
+/* Drop Down Filter FOr Product Categories */
+.filter-container {
+    padding-left: 290px;
+    padding-top: 100px;
+    padding-bottom: 15px;
 }
 
 /* Displaying of  Products */
@@ -136,7 +89,7 @@ a:hover {
 .flex-item {
     padding: 0px; /* Adjust the padding as needed */
     flex-grow: 0.3;
-    height: 500px;
+    height: 450px;
     flex-basis: 1%;
     display: flex;
     flex-direction: column;
@@ -181,8 +134,13 @@ img {
 .addToCartButton {
     background-color: #173b4b;
     color: #FFFFFF;
-    border: none; /* Remove button outline */
-    margin-top: px; /* Adjust the top margin as needed */
+    border: none;
     border-radius: 20px;
     padding: 8px;
+    width: 120px; /* Set a fixed width for the button */
+    transition: background-color 0.3s ease; /* Add a transition for the background color */
+}
+
+.addToCartButton:hover {
+    background-color: #2c5d6e; /* Change to the desired color on hover */
 }
