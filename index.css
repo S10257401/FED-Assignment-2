@@ -60,12 +60,9 @@ a:hover {
 
 }
 
-
-
-
 /* Second Section */
 #Second-Section {
-    margin-top: -290px; /* Add any specific styles for the second section if needed */
+    margin-top: -390px; /* Add any specific styles for the second section if needed */
     display: flex;
     justify-content: center;
     margin-bottom: -200px;
@@ -106,8 +103,8 @@ a:hover {
 .Product-Category-Heading {
     font-size: 18px; /* Add 'px' to specify font size */
     text-align: left; /* Center the heading */
-    padding-left: 210px;
-    margin-top: 80px;
+    padding-left: 300px;
+    margin-top: 0px;
 
 }
 
