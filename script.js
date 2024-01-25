@@ -37,19 +37,3 @@ function filterItems() {
   });
 }
 
-// Linking the Product Categories on the Home Page to the Respective Pages on the Product Page
-function filterItems() {
-  // Get the selected category from the dropdown
-  var categoryFilter = document.getElementById("Category-Name");
-  var selectedCategory = categoryFilter.value;
-
-  // Check if a category is specified
-  if (selectedCategory === "all") {
-      console.log('all categories selected');
-      // Handle the case where "All" is selected (show all items)
-  } if (selectedCategory === "computer and peripherals") {
-      console.log('computer and peripherals:', selectedCategory);
-      // Use the selected category to filter or display relevant items
-      // For demonstration purposes, let's just log it to the console.
-  }
-}z
