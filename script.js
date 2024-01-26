@@ -37,3 +37,13 @@ function filterItems() {
   });
 }
 
+//Linking of Product Category on Home Page to Product Page 
+// Open Product Page with Selected Category and Set Filter
+function openProductPage(category) {
+  // Set the selected category in the filter bar
+  const categoryFilter = document.getElementById('categoryFilter');
+  categoryFilter.value = category.replace(/ /g, '-'); // replace spaces with hyphens
+
+  // Redirect to products.html
+  window.location.href = 'products.html';
+}
