@@ -63,3 +63,36 @@ a:hover {
 .Games-Page-Header {
     text-align: center;
 }
+
+.Flappy-Bird-Game {
+    text-align: center;
+    width: 70%; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the section horizontally */
+    padding-top: 100px;
+    margin-left: -300px;
+}
+
+.FlappyBirdImage img {
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px; /* Add padding for a comfortable touch area */
+    background-color: #2c5d6e; /* Set background color */
+    color: #fff; /* Set text color to white */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add rounded corners */
+    font-size: 16px; /* Set font size */
+    cursor: pointer; /* Add a pointer cursor on hover */
+    transition: background-color 0.3s ease, opacity 0.3s ease; /* Smooth background color and opacity transition */
+
+    /* Hover state */
+    &:hover {
+        background-color: #2c5d6e; /* Darker background color on hover */
+        opacity: 0.8; /* Reduce opacity on hover */
+    }
+}
