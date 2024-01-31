@@ -47,3 +47,5 @@ function openProductPage(category) {
   // Redirect to products.html
   window.location.href = 'products.html';
 }
+
+// Spin The Wheel on Games Page
