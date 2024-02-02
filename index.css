@@ -216,6 +216,7 @@ a:hover {
     justify-content: center;
     min-height: 100vh;
     background: #FFFFFF;
+    margin-bottom: -300px;
 }
 
 .Popular-Products-Heading {
@@ -227,7 +228,6 @@ a:hover {
 .Product-Slider-Container {
     max-width: 1300px;
     width: 95%;
-    margin-bottom: -300px;
 }
 
 .Slider-Wrapper {
