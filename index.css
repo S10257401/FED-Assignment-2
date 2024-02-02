@@ -1,380 +1,380 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-@media only screen and (max-width: 2000px) {
-    main {
-        margin-top: 70px; 
-    }
 
-    body {
-    }
+main {
+    margin-top: 70px; 
+}
 
-    /* Navigation Bar */
-    #First-Section {
-        padding: 10px;
-        align-items: center;
-        margin-top: 250px;
-        margin-bottom: -430px;
-    }
+body {
+    margin: 0px;
+}
 
-    nav {
-        background-color: #EE4D2D;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 1000;
-        padding: 10px;
-        font-family: "Poppins",sans-serif;   
-        height: 135px;
-    }
+/* Navigation Bar */
+#First-Section {
+    padding: 10px;
+    align-items: center;
+    margin-top: 250px;
+    margin-bottom: -430px;
+}
 
-
-    ul {
-        list-style: none;
-        margin: 0;
-        display: flex; 
-        margin-top: -23px;
-        margin-left: 0;
-        align-items: center;
-        
-    }
-
-    li {
-        margin-right: 20px; 
-    }
-
-    a {
-        text-decoration: none;
-        color: white; 
-        font-size: 20px; 
-        padding: 14px;
-        display: inline-block;
-        transition: color 0.3s; 
-    }
-
-    a:hover {
-        color: #ffffff;
-        
-
-    }
-
-    #First-Section img {
-        width: 200px;    
-        cursor: pointer; 
-    }
-
-    /* Second Section */
-    #Second-Section {
-        margin-top: -390px; /* Add any specific styles for the second section if needed */
-        display: flex;
-        justify-content: center;
-        margin-bottom: -200px;
-        padding-left: 160px;
-    }
-
-    /* Container for the first slider */
-    .Ad-Slider-Container {
-        width: 40%; /* Adjust the width of the first slider container as needed */
-        margin-right: -300px; /* Adjust the space between sliders as needed */
-    }
-
-    .swiper {
-        width: 100%; /* Set the width of the first slider to 100% of the container */
-        max-width: 958px; /* Set a maximum width for the first slider if needed */
-    }
-
-    .swiper-slide img {
-        width: 100%; /* Make sure the images inside the first slider take the full width */
-        height: auto; /* Maintain the aspect ratio of the images */
-    }
+nav {
+    background-color: #EE4D2D;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px;
+    font-family: "Poppins",sans-serif;   
+    height: 135px;
+}
 
 
-    /* Container for the second slider */
-    .Slider2 {
-        width: 60%; /* Adjust the width of the second slider container as needed */
-        margin-right: 330px;
-        padding-left:6px;
-    }
+ul {
+    list-style: none;
+    margin: 0;
+    display: flex; 
+    margin-top: -23px;
+    margin-left: 0;
+    align-items: center;
+    
+}
 
-    .Slider2 img {
-        width: 350px; /* Make sure the images inside the second slider take the full width */
-        height: 418px; /* Maintain the aspect ratio of the images */
-    }
+li {
+    margin-right: 20px; 
+}
 
-    /* Product Category section */
-    .Product-Category-Heading {
-        font-size: 18px; /* Add 'px' to specify font size */
-        text-align: left; /* Center the heading */
-        padding-left: 300px;
-        margin-top: 0px;
+a {
+    text-decoration: none;
+    color: white; 
+    font-size: 20px; 
+    padding: 14px;
+    display: inline-block;
+    transition: color 0.3s; 
+}
 
-    }
+a:hover {
+    color: #ffffff;
+    
 
-    #Third-Section {
-        display: flex;
-        width: 90%;
-        max-width: 1300px;
-        margin: 0 auto;
-        background-color: #FFFFFF;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        gap: 0px;
-        padding: 20px;
-        margin-top: -40px;
-        padding-right: 24px;
-        padding-bottom: 150px;
-    }
+}
 
-    .Product-Category-Container {
-        flex-grow: 2;
-        height: 300px;
-        flex-basis: 18%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        border: 2px solid lightgrey;
-        margin: 20px 0; /* Adjust the margin as needed */
-        box-sizing: border-box;
-    }
+#First-Section img {
+    width: 200px;    
+    cursor: pointer; 
+}
 
-    .Product-Category-Container a {
-        text-decoration: none;
-        color: inherit;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+/* Second Section */
+#Second-Section {
+    margin-top: -390px; /* Add any specific styles for the second section if needed */
+    display: flex;
+    justify-content: center;
+    margin-bottom: -200px;
+    padding-left: 160px;
+}
 
-    .Flex-Category {
-        max-width: 80%;
-        height: 80%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-    }
+/* Container for the first slider */
+.Ad-Slider-Container {
+    width: 40%; /* Adjust the width of the first slider container as needed */
+    margin-right: -300px; /* Adjust the space between sliders as needed */
+}
 
-    .product-category-photos {
-        max-width: 200px;
-        max-height: 150px; /* Adjust as needed */
-        object-fit: contain;
-        margin-top: 20px;
-        margin-bottom: -10px;
-    }
+.swiper {
+    width: 100%; /* Set the width of the first slider to 100% of the container */
+    max-width: 958px; /* Set a maximum width for the first slider if needed */
+}
 
-    .Category-Name {
-        text-align: center;
-        font-weight: bold;
-        font-size: 1.2em;
-        margin-top: 10px;
-    }
+.swiper-slide img {
+    width: 100%; /* Make sure the images inside the first slider take the full width */
+    height: auto; /* Maintain the aspect ratio of the images */
+}
 
-    /* slider start*/
 
-    .Ad-Slider-Container{
-        width: 80%;
-        height: 100vh;
-        background: #ffffff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-left: 150px;
-        margin-top: 100px;
-    }
+/* Container for the second slider */
+.Slider2 {
+    width: 60%; /* Adjust the width of the second slider container as needed */
+    margin-right: 330px;
+    padding-left:6px;
+}
 
-    .swiper{
-        width: 80%;
-        height: fit-content;
-    }
+.Slider2 img {
+    width: 350px; /* Make sure the images inside the second slider take the full width */
+    height: 418px; /* Maintain the aspect ratio of the images */
+}
 
-    .swiper-slide img{
-        width: 100%;
-    }
+/* Product Category section */
+.Product-Category-Heading {
+    font-size: 18px; /* Add 'px' to specify font size */
+    text-align: left; /* Center the heading */
+    padding-left: 300px;
+    margin-top: 0px;
 
-    .swiper .swiper-button-prev, .swiper .swiper-button-next{
-        color: #ffffff;
-    }
+}
 
-    .swiper .swiper-pagination-bullet-active{
-        background: #ffffff;
-    }
-    /* Orange divider*/
-    .Orange-Line {
-        width: 100%;
-        border: 2px solid #EE4D2D;
-        margin: 20px auto;    
-    }
+#Third-Section {
+    display: flex;
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 0px;
+    padding: 20px;
+    margin-top: -40px;
+    padding-right: 24px;
+    padding-bottom: 150px;
+}
 
-    /*Fourth Section */
-    #Fourth-Section {
-        padding-bottom: 200px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        background: #FFFFFF;
-    }
+.Product-Category-Container {
+    flex-grow: 2;
+    height: 300px;
+    flex-basis: 18%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid lightgrey;
+    margin: 20px 0; /* Adjust the margin as needed */
+    box-sizing: border-box;
+}
 
-    .Popular-Products-Heading {
-        margin-left: 280px;
-        margin-bottom: -200px;
-    }
+.Product-Category-Container a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-    .Product-Slider-Container {
-        max-width: 1200px;
-        width: 95%;
-    }
+.Flex-Category {
+    max-width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    .Slider-Wrapper .product-slide-button {
-        position: absolute;
-        height: 50px;
-        width: 50px;
-        color: #fff;
-        border: none;
-        outline: none;
-        background: #000;
-        font-size: 2.2rem;
-        cursor: pointer;
-        border-radius: 50%;
-    }
+.product-category-photos {
+    max-width: 200px;
+    max-height: 150px; /* Adjust as needed */
+    object-fit: contain;
+    margin-top: 20px;
+    margin-bottom: -10px;
+}
 
-    .Slider-Wrapper .Image-List {
-        display: grid;
-        gap: 18px;
-        grid-template-columns: repeat(10, 1fr);
-        font-size: 0;
-        margin-bottom: 30px;
-        overflow-x: auto;
-        scrollbar-width: none;
-    }
+.Category-Name {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
 
-    .Slider-Wrapper .Image-List::-webkit-scrollbar {
-        display: none;
-    }
+/* slider start*/
 
-    .Slider-Wrapper .Image-List .Image-Item {
-        width: 325px;
-        height: 400px;
-        object-fit: cover;
-    }
+.Ad-Slider-Container{
+    width: 80%;
+    height: 100vh;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 150px;
+    margin-top: 100px;
+}
 
-    .Product-Slider-Container .Product-Slider-ScrollBar {
-        height: 24px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-    }
+.swiper{
+    width: 80%;
+    height: fit-content;
+}
 
-    .Product-Slider-ScrollBar .Product-Scrollbar-Track{
-        height: 2px;
-        width: 100%;
-        background: #ccc;
-        position: relative;
-        border-radius: 4px;
-    }
+.swiper-slide img{
+    width: 100%;
+}
 
-    .Product-Slider-ScrollBar:hover .Product-Scrollbar-Track {
-        height: 4px;
-    }
+.swiper .swiper-button-prev, .swiper .swiper-button-next{
+    color: #ffffff;
+}
 
-    .Product-Slider-ScrollBar .Product-Scrollbar-Thumb{
-        position: absolute;
-        height: 100%;
-        width: 50%;
-        background: #000;
-        border-radius: inherit;
-        cursor: grab;
-    }
+.swiper .swiper-pagination-bullet-active{
+    background: #ffffff;
+}
+/* Orange divider*/
+.Orange-Line {
+    width: 100%;
+    border: 2px solid #EE4D2D;
+    margin: 20px auto;    
+}
 
-    .Product-Slider-ScrollBar .Product-Scrollbar-Thumb:active {
-        cursor: grabbing;
-        height: 8px;
-        top: -2px;
-    }
+/*Fourth Section */
+#Fourth-Section {
+    padding-bottom: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #FFFFFF;
+}
 
-    .Product-Slider-ScrollBar .Product-Scrollbar-Thumb::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: -10px;
-        bottom: -10px;
-    }
+.Popular-Products-Heading {
+    margin-left: 280px;
+    margin-bottom: -200px;
+}
 
-    /* Fifth Section */
-    #Fifth-Section {
-        height: 40vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+.Product-Slider-Container {
+    max-width: 1200px;
+    width: 95%;
+}
 
-    .Footer-Section {
-        display: flex;
-        flex-wrap: wrap; /* Allow child elements to wrap to the next line */
-    }
+.Slider-Wrapper .product-slide-button {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    color: #fff;
+    border: none;
+    outline: none;
+    background: #000;
+    font-size: 2.2rem;
+    cursor: pointer;
+    border-radius: 50%;
+}
 
-    .Modes-Of-Payment,
-    .Logistic-Options {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 20px; /* Adjust this value as needed for the spacing */
-        margin-left: 80px; /* Adjust this value to increase lateral space */
-        margin-right: 80px; /* Adjust this value to increase lateral space */
-    }
+.Slider-Wrapper .Image-List {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(10, 1fr);
+    font-size: 0;
+    margin-bottom: 30px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
 
-    .payment-heading {
-        margin-bottom: 10px; /* Adjust this value as needed for the spacing */
-        text-align: center;
-    }
+.Slider-Wrapper .Image-List::-webkit-scrollbar {
+    display: none;
+}
 
-    .logistic-heading {
-        margin-bottom: 30px; /* Adjust this value as needed for the spacing */
-        text-align: center;
-    }
+.Slider-Wrapper .Image-List .Image-Item {
+    width: 325px;
+    height: 400px;
+    object-fit: cover;
+}
 
-    .payment-logos,
-    .logistic-logos {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap; /* Allow logos to wrap to the next line if needed */
-    }
+.Product-Slider-Container .Product-Slider-ScrollBar {
+    height: 24px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
 
-    .payment-logo,
-    .logistic-logo {
-        width: 80px; /* Set the desired width for both payment and logistics logos */
-        height: auto;
-        margin: 0 10px 10px 0px; /* Adjust the last value for bottom margin */
-    }
+.Product-Slider-ScrollBar .Product-Scrollbar-Track{
+    height: 2px;
+    width: 100%;
+    background: #ccc;
+    position: relative;
+    border-radius: 4px;
+}
 
-    /* Additional styles for better alignment */
-    .Logistic-Options {
-        margin-top: 20px; /* Adjust this value for spacing between payment and logistics sections */
-    }
+.Product-Slider-ScrollBar:hover .Product-Scrollbar-Track {
+    height: 4px;
+}
 
-    .Socials {
-        align-items: center;
-        padding-top: 0px;
-        text-align: center;
-    }
+.Product-Slider-ScrollBar .Product-Scrollbar-Thumb{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    background: #000;
+    border-radius: inherit;
+    cursor: grab;
+}
 
-    .Socials a {
-        text-decoration: none; 
-        margin: 20px;    
-        color: black;
-        opacity: 1; 
-        transition: opacity 0.4s ease; 
-    }
+.Product-Slider-ScrollBar .Product-Scrollbar-Thumb:active {
+    cursor: grabbing;
+    height: 8px;
+    top: -2px;
+}
 
-    .Socials a:hover {
-        opacity: 0.4; 
-    }
+.Product-Slider-ScrollBar .Product-Scrollbar-Thumb::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    bottom: -10px;
+}
 
-    .Shopee-QR-Code {
-        font-size: 18px;
-    }
+/* Fifth Section */
+#Fifth-Section {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Footer-Section {
+    display: flex;
+    flex-wrap: wrap; /* Allow child elements to wrap to the next line */
+}
+
+.Modes-Of-Payment,
+.Logistic-Options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px; /* Adjust this value as needed for the spacing */
+    margin-left: 80px; /* Adjust this value to increase lateral space */
+    margin-right: 80px; /* Adjust this value to increase lateral space */
+}
+
+.payment-heading {
+    margin-bottom: 10px; /* Adjust this value as needed for the spacing */
+    text-align: center;
+}
+
+.logistic-heading {
+    margin-bottom: 30px; /* Adjust this value as needed for the spacing */
+    text-align: center;
+}
+
+.payment-logos,
+.logistic-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow logos to wrap to the next line if needed */
+}
+
+.payment-logo,
+.logistic-logo {
+    width: 80px; /* Set the desired width for both payment and logistics logos */
+    height: auto;
+    margin: 0 10px 10px 0px; /* Adjust the last value for bottom margin */
+}
+
+/* Additional styles for better alignment */
+.Logistic-Options {
+    margin-top: 20px; /* Adjust this value for spacing between payment and logistics sections */
+}
+
+.Socials {
+    align-items: center;
+    padding-top: 0px;
+    text-align: center;
+}
+
+.Socials a {
+    text-decoration: none; 
+    margin: 20px;    
+    color: black;
+    opacity: 1; 
+    transition: opacity 0.4s ease; 
+}
+
+.Socials a:hover {
+    opacity: 0.4; 
+}
+
+.Shopee-QR-Code {
+    font-size: 18px;
 }
