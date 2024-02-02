@@ -226,6 +226,19 @@ a:hover {
     width: 95%;
 }
 
+.Slider-Wrapper .product-slide-button {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    color: #fff;
+    border: none;
+    outline: none;
+    background: #000;
+    font-size: 2.2rem;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
 .Slider-Wrapper .Image-List {
     display: grid;
     gap: 18px;
