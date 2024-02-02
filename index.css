@@ -71,6 +71,7 @@ a:hover {
     justify-content: center;
     margin-bottom: -200px;
     padding-left: 160px;
+    align-items: center;
 }
 
 /* Container for the first slider */
@@ -218,17 +219,24 @@ a:hover {
 }
 
 .Popular-Products-Heading {
-    margin-left: 280px;
+    margin-left: 300px;
     margin-bottom: -200px;
+    margin-top: -50px;
 }
 
 .Product-Slider-Container {
-    max-width: 1200px;
+    max-width: 1300px;
     width: 95%;
+    margin-bottom: -300px;
+}
+
+.Slider-Wrapper {
+    position: relative;
 }
 
 .Slider-Wrapper .product-slide-button {
     position: absolute;
+    top: 50%;
     height: 50px;
     width: 50px;
     color: #fff;
@@ -238,6 +246,20 @@ a:hover {
     font-size: 2.2rem;
     cursor: pointer;
     border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.Slider-Wrapper .product-slide-button:hover {
+    background: #444;
+}
+
+.Slider-Wrapper .product-slide-button#product-prev-slide {
+    left: -20px;
+    display: none;
+}
+
+.Slider-Wrapper .product-slide-button#product-next-slide {
+    right: -20px;
 }
 
 .Slider-Wrapper .Image-List {
@@ -301,6 +323,26 @@ a:hover {
     right: 0;
     top: -10px;
     bottom: -10px;
+}
+
+@media (max-width:1023px) {
+    .Slider-Wrapper .product-slide-button {
+        display: none!important;
+    }
+
+    .Slider-Wrapper .Image-List {
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    .Slider-Wrapper .Image-List .Image-Item {
+        width: 280px;
+        height: 380px;
+    }
+
+    .Product-Slider-ScrollBar .Product-Scrollbar-Thumb {
+        width: 20%;
+    }
 }
 
 /* Fifth Section */
