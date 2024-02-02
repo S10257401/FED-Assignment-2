@@ -73,7 +73,7 @@ a:hover {
 }
 
 /* Container for the first slider */
-.Slider-container {
+.Ad-Slider-Container {
     width: 40%; /* Adjust the width of the first slider container as needed */
     margin-right: -300px; /* Adjust the space between sliders as needed */
 }
@@ -102,7 +102,6 @@ a:hover {
 }
 
 /* Product Category section */
-
 .Product-Category-Heading {
     font-size: 18px; /* Add 'px' to specify font size */
     text-align: left; /* Center the heading */
@@ -123,6 +122,7 @@ a:hover {
     padding: 20px;
     margin-top: -40px;
     padding-right: 24px;
+    padding-bottom: 150px;
 }
 
 .Product-Category-Container {
@@ -170,10 +170,9 @@ a:hover {
     margin-top: 10px;
 }
 
-
 /* slider start*/
 
-.Slider-container{
+.Ad-Slider-Container{
     width: 80%;
     height: 100vh;
     background: #ffffff;
@@ -182,7 +181,6 @@ a:hover {
     justify-content: center;
     margin-left: 150px;
     margin-top: 100px;
-    
 }
 
 .swiper{
@@ -208,6 +206,88 @@ a:hover {
     margin: 20px auto;    
 }
 
+/*Fourth Section */
+#Fourth-Section {
+    padding-bottom: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #FFFFFF;
+}
+
+.Popular-Products-Heading {
+    margin-left: 280px;
+    margin-bottom: -200px;
+}
+
+.Product-Slider-Container {
+    max-width: 1200px;
+    width: 95%;
+}
+
+.Slider-Wrapper .Image-List {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(10, 1fr);
+    font-size: 0;
+    margin-bottom: 30px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.Slider-Wrapper .Image-List::-webkit-scrollbar {
+    display: none;
+}
+
+.Slider-Wrapper .Image-List .Image-Item {
+    width: 325px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.Product-Slider-Container .Product-Slider-ScrollBar {
+    height: 24px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.Product-Slider-ScrollBar .Product-Scrollbar-Track{
+    height: 2px;
+    width: 100%;
+    background: #ccc;
+    position: relative;
+    border-radius: 4px;
+}
+
+.Product-Slider-ScrollBar:hover .Product-Scrollbar-Track {
+    height: 4px;
+}
+
+.Product-Slider-ScrollBar .Product-Scrollbar-Thumb{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    background: #000;
+    border-radius: inherit;
+    cursor: grab;
+}
+
+.Product-Slider-ScrollBar .Product-Scrollbar-Thumb:active {
+    cursor: grabbing;
+    height: 8px;
+    top: -2px;
+}
+
+.Product-Slider-ScrollBar .Product-Scrollbar-Thumb::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    bottom: -10px;
+}
 
 /* Fifth Section */
 #Fifth-Section {

@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz.wght.FILL,GRAD@48,400,0,0">
     <script src="script.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <title>eShop website</title>
@@ -27,7 +28,7 @@
     </section>
 
     <section id="Second-Section">
-        <div class="Slider-container">
+        <div class="Ad-Slider-Container">
             <div class="swiper">
                 <div class="swiper-wrapper">
                 <!--Slides-->
@@ -48,7 +49,7 @@
         </div>
 
         <div class="Slider2">
-            <div class="Slider-container">
+            <div class="Ad-Slider-Container">
                 <div class="swiper">
                     <div class="swiper-wrapper">
                     <!--Slides-->
@@ -75,8 +76,8 @@
         <h1>Product Categories</h1>
     </div>
     <section id="Third-Section">
+
     <!-- Computer and Peripherals -->
-    
     <div class="Product-Category-Container">
         <a href="products.html?category=computer and peripherals" onclick="openProductPage('computer and peripherals')">
             <div class="Flex-Category">
@@ -137,13 +138,35 @@
     </div>
 </section>
 
-  </section>
-
-    <section id="FourthSection">
-        <p>Product Display section</p>
-        
-
+  
+    <div class="Popular-Products-Heading">
+        <h1>Popular Products</h1>
+    </div>
+    <section id="Fourth-Section">
+        <div class="Product-Slider-Container">
+            <div class="Slider-Wrapper">
+                <button id="product-prev-slide" class="product-slide-button material-symbols-rounded">chevron_left</button>
+                <div class="Image-List">
+                    <img src="images/Logitech Gpro Superlight.jpg" alt="Logitech Mouse" class="Image-Item">
+                    <img src="images/Logitech Gpro Superlight.jpg" alt="Logitech Mouse" class="Image-Item">
+                    <img src="images/Logitech Gpro Superlight.jpg" alt="Logitech Mouse" class="Image-Item">
+                    <img src="images/Logitech Gpro Superlight.jpg" alt="Logitech Mouse" class="Image-Item">
+                    <img src="images/Logitech Gpro Superlight.jpg" alt="Logitech Mouse" class="Image-Item">
+                    <img src="images/Logitech Gpro Superlight.jpg" alt="Logitech Mouse" class="Image-Item">
+                    <img src="images/Logitech Gpro Superlight.jpg" alt="Logitech Mouse" class="Image-Item">
+                    <img src="images/Logitech Gpro Superlight.jpg" alt="Logitech Mouse" class="Image-Item">
+                    <img src="images/Logitech Gpro Superlight.jpg" alt="Logitech Mouse" class="Image-Item">
+                </div>
+                <button id="product-next-slide" class="product-slide-button material-symbols-rounded">chevron_right</button>
+            </div>
+            <div class="Product-Slider-ScrollBar">
+                <div class="Product-Scrollbar-Track">
+                    <div class="Product-Scrollbar-Thumb"></div>
+                </div>
+            </div>
+        </div>
     </section>
+
     <!-- Orange divider -->
 
     <hr class="Orange-Line">

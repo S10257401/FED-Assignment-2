@@ -1,4 +1,4 @@
-//// Slider For Advertisements On Home Page
+//// Slider for advertisements on Home Page
 document.addEventListener('DOMContentLoaded', function () {
   const swiper = new Swiper('.swiper', {
     autoplay: {
@@ -15,9 +15,8 @@ document.addEventListener('DOMContentLoaded', function () {
         prevEl: '.swiper-button-prev',
     },
   });
-
-
 })
+
 
 //// Dropdown Filter For Product Page 
 function filterItems() {
@@ -48,6 +47,7 @@ function openProductPage(category) {
   window.location.href = 'products.html';
 }
 
+
 //// Spin The Wheel on Games Page
 
 
@@ -55,7 +55,6 @@ function openProductPage(category) {
 
 
 //// Linking the Product Categories on home page to product page
-
 // Function to get URL parameters by name
 function getParameterByName(name, url) {
   if (!url) url = window.location.href;
