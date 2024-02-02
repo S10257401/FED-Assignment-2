@@ -5,6 +5,9 @@ main {
     margin-top: 70px; 
 }
 
+body {
+}
+
 /* Navigation Bar */
 #First-Section {
     padding: 10px;
@@ -119,6 +122,7 @@ a:hover {
     gap: 0px;
     padding: 20px;
     margin-top: -40px;
+    padding-right: 24px;
 }
 
 .Product-Category-Container {
@@ -152,10 +156,11 @@ a:hover {
 }
 
 .product-category-photos {
-    max-width: 100%;
-    max-height: 100%; /* Adjust as needed */
+    max-width: 200px;
+    max-height: 150px; /* Adjust as needed */
     object-fit: contain;
     margin-top: 20px;
+    margin-bottom: -10px;
 }
 
 .Category-Name {
