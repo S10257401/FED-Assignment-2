@@ -13,6 +13,7 @@ body {
     padding: 10px;
     align-items: center;
     margin-top: 250px;
+    margin-bottom: -430px;
 }
 
 nav {
@@ -60,7 +61,6 @@ a:hover {
 #First-Section img {
     width: 200px;    
     cursor: pointer; 
-
 }
 
 /* Second Section */
