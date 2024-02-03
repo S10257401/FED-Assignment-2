@@ -77,30 +77,27 @@ a:hover {
 /* Container for the first slider */
 .Ad-Slider-Container {
     width: 40%; /* Adjust the width of the first slider container as needed */
-    margin-right: -300px; /* Adjust the space between sliders as needed */
 }
 
 .swiper {
     width: 100%; /* Set the width of the first slider to 100% of the container */
-    max-width: 958px; /* Set a maximum width for the first slider if needed */
+    max-width: 938px; /* Set a maximum width for the first slider if needed */
 }
 
 .swiper-slide img {
-    width: 100%; /* Make sure the images inside the first slider take the full width */
+    width: 90%; /* Make sure the images inside the first slider take the full width */
     height: auto; /* Maintain the aspect ratio of the images */
 }
 
-
-/* Container for the second slider */
-.Slider2 {
-    width: 60%; /* Adjust the width of the second slider container as needed */
-    margin-right: 330px;
-    padding-left:6px;
+.Ad-Non-Slider {
+    margin-right: 404px;
+    margin-left: -84px;
 }
 
-.Slider2 img {
-    width: 350px; /* Make sure the images inside the second slider take the full width */
-    height: 418px; /* Maintain the aspect ratio of the images */
+.Ad-Non-Slider img {
+    height: 408px;
+    margin-top: 100px;
+    width: 538px;
 }
 
 /* Product Category section */
@@ -221,7 +218,7 @@ a:hover {
 
 .Popular-Products-Heading {
     margin-left: 300px;
-    margin-bottom: -240px;
+    margin-bottom: -270px;
     margin-top: -50px;
 }
 
