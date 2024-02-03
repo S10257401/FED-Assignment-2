@@ -221,7 +221,7 @@ a:hover {
 
 .Popular-Products-Heading {
     margin-left: 300px;
-    margin-bottom: -200px;
+    margin-bottom: -240px;
     margin-top: -50px;
 }
 
@@ -278,7 +278,7 @@ a:hover {
 
 .Slider-Wrapper .Image-List .Image-Item {
     width: 325px;
-    height: 400px;
+    height: 320px;
     object-fit: cover;
 }
 

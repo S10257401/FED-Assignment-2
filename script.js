@@ -64,9 +64,10 @@ const initSlider = () => {
     });
 
     const handleSlideButtons = () => {
-        slideButtons[0].style.display = imageList <= 0 ? "none" : "block";
+        slideButtons[0].style.display = imageList.scrollLeft <= 0 ? "none" : "block";
         slideButtons[1].style.display = imageList.scrollLeft >= maxScrollLeft ? "none" : "block";
     }
+
 
     // Update scrollbar thumb position based on image scroll
     const updateScrollThumbPosition = () => {
