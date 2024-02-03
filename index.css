@@ -71,35 +71,33 @@ a:hover {
     justify-content: center;
     margin-bottom: -200px;
     padding-left: 160px;
+    align-items: center;
 }
 
 /* Container for the first slider */
 .Ad-Slider-Container {
     width: 40%; /* Adjust the width of the first slider container as needed */
-    margin-right: -300px; /* Adjust the space between sliders as needed */
 }
 
 .swiper {
     width: 100%; /* Set the width of the first slider to 100% of the container */
-    max-width: 958px; /* Set a maximum width for the first slider if needed */
+    max-width: 938px; /* Set a maximum width for the first slider if needed */
 }
 
 .swiper-slide img {
-    width: 100%; /* Make sure the images inside the first slider take the full width */
+    width: 90%; /* Make sure the images inside the first slider take the full width */
     height: auto; /* Maintain the aspect ratio of the images */
 }
 
-
-/* Container for the second slider */
-.Slider2 {
-    width: 60%; /* Adjust the width of the second slider container as needed */
-    margin-right: 330px;
-    padding-left:6px;
+.Ad-Non-Slider {
+    margin-right: 404px;
+    margin-left: -84px;
 }
 
-.Slider2 img {
-    width: 350px; /* Make sure the images inside the second slider take the full width */
-    height: 418px; /* Maintain the aspect ratio of the images */
+.Ad-Non-Slider img {
+    height: 408px;
+    margin-top: 100px;
+    width: 538px;
 }
 
 /* Product Category section */
@@ -215,20 +213,27 @@ a:hover {
     justify-content: center;
     min-height: 100vh;
     background: #FFFFFF;
+    margin-bottom: -300px;
 }
 
 .Popular-Products-Heading {
-    margin-left: 280px;
-    margin-bottom: -200px;
+    margin-left: 300px;
+    margin-bottom: -270px;
+    margin-top: -50px;
 }
 
 .Product-Slider-Container {
-    max-width: 1200px;
+    max-width: 1300px;
     width: 95%;
+}
+
+.Slider-Wrapper {
+    position: relative;
 }
 
 .Slider-Wrapper .product-slide-button {
     position: absolute;
+    top: 50%;
     height: 50px;
     width: 50px;
     color: #fff;
@@ -238,6 +243,20 @@ a:hover {
     font-size: 2.2rem;
     cursor: pointer;
     border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.Slider-Wrapper .product-slide-button:hover {
+    background: #444;
+}
+
+.Slider-Wrapper .product-slide-button#product-prev-slide {
+    left: -20px;
+    display: none;
+}
+
+.Slider-Wrapper .product-slide-button#product-next-slide {
+    right: -20px;
 }
 
 .Slider-Wrapper .Image-List {
@@ -256,7 +275,7 @@ a:hover {
 
 .Slider-Wrapper .Image-List .Image-Item {
     width: 325px;
-    height: 400px;
+    height: 320px;
     object-fit: cover;
 }
 
@@ -301,6 +320,26 @@ a:hover {
     right: 0;
     top: -10px;
     bottom: -10px;
+}
+
+@media (max-width:1023px) {
+    .Slider-Wrapper .product-slide-button {
+        display: none!important;
+    }
+
+    .Slider-Wrapper .Image-List {
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    .Slider-Wrapper .Image-List .Image-Item {
+        width: 280px;
+        height: 380px;
+    }
+
+    .Product-Slider-ScrollBar .Product-Scrollbar-Thumb {
+        width: 20%;
+    }
 }
 
 /* Fifth Section */

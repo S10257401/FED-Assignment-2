@@ -102,12 +102,11 @@ a:hover {
 }
 
 .flex-img {
-    max-width: 250px;
+    max-width: 260px;
     max-height: 250px; /* Set a maximum height for the image */
     height: auto;
     transition: transform 0.3s;
-    margin-top: 60px;
-   
+    margin-top: 0px;
 }
 
 .flex-item:hover {
@@ -140,6 +139,7 @@ img {
     padding: 8px;
     width: 120px; /* Set a fixed width for the button */
     transition: background-color 0.3s ease; /* Add a transition for the background color */
+    margin-bottom: -100px;
 }
 
 .addToCartButton:hover {
