@@ -31,15 +31,16 @@ ul {
     margin-top: -23px;
     margin-left: 0;
     align-items: center;
+    gap: 40px;
     
 }
 
 li {
-    margin-right: 20px; 
+    margin-right: -22px; 
 }
 
 li.active {
-    margin-left: 60%;
+    margin-left: 52%;
 }
 
 a {
