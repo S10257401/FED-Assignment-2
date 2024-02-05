@@ -7,7 +7,7 @@ main {
 
 /* Navigation Bar */
 #First-Section {
-    padding: 10px;
+    padding: 35px;
     align-items: center;
 }
 
@@ -96,7 +96,7 @@ a:hover {
 }
 
 .wrapper.active{
-    height: 520px;
+    height: 570px;
 
 }
 
