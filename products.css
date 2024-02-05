@@ -58,6 +58,14 @@ a:hover {
 
 }
 
+/* Shopping Cart */
+.shopping-cart-logo {
+    color: #FFFFFF;
+    height: 4rem;
+    width: auto;
+    margin-bottom: -28px;
+}
+
 #First-Section img {
     width: 200px;    
     cursor: pointer; 
