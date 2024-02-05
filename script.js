@@ -39,7 +39,7 @@ const initSlider = () => {
             const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
             const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft
 
-            ProductScrollBarThumb.style.left = `${boundedPosition}px` ;
+            ProductScrollBarThumb.style.left = `${boundedPosition}px`;
             imageList.scrollLeft = scrollPosition;
         }
 
@@ -104,22 +104,7 @@ function filterItems() {
   });
 }
 
-//// Linking of Product Category on Home Page to Product Page 
-// Open Product Page with Selected Category and Set Filter
-function openProductPage(category) {
-  // Set the selected category in the filter bar
-  const categoryFilter = document.getElementById('categoryFilter');
-  categoryFilter.value = category.replace(/ /g, '-'); // replace spaces with hyphens
-
-  // Redirect to products.html
-  window.location.href = 'products.html';
-}
-
-
 //// Spin The Wheel on Games Page
-
-
-
 
 
 //// Linking the Product Categories on home page to product page
@@ -178,3 +163,16 @@ function openProductPage(category) {
   // Redirect to products.html with the selected category as a parameter
   window.location.href = 'products.html?category=' + category;
 }
+
+//// Log in Feature 
+const wrapper = document.querySelector('.wrapper');
+const loginLink = document.querySelector('.login-link');
+const registerLink = document.querySelector('.register-link');
+
+registerLink.addEventListener('click',()=> {
+    wrapper.classList.add('active');
+});
+
+loginLink.addEventListener('click',()=> {
+    wrapper.classList.remove('active');
+});
