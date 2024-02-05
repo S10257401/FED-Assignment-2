@@ -120,6 +120,9 @@ a:hover {
 .wrapper .form-box.register {
     position: absolute;
     transform: translateX(400px) ;
+    height: 400px;
+    width: auto;
+    margin-top: -62px;
 }
 
 .wrapper.active .form-box.register {
@@ -145,7 +148,6 @@ a:hover {
     border-bottom: 2px solid #162938;
     margin: 30px 0;
     transform: translateY(0);
-    transition: transform 0.18s ease; /* Add transition for the heading */
 }
 
 .input-box label {
@@ -177,7 +179,6 @@ a:hover {
     color:#162938;
     font-weight: 600;
     padding: 0 35px 0 5px;
-
 }
 
 .input-box .icon{
@@ -188,11 +189,20 @@ a:hover {
     line-height: 57px;
 }
 
-.remember-forgot{
+.remember-forgot-login{
     font-size: .9em;
     color: #162938;
     font-weight: 500;
-    margin: 15px 0 15px;
+    margin: -5px 0px 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot-register{
+    font-size: .9em;
+    color: #162938;
+    font-weight: 500;
+    margin: -42px 0px 15px;
     display: flex;
     justify-content: space-between;
 }
