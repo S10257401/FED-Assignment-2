@@ -32,7 +32,6 @@ ul {
     margin-top: -23px;
     margin-left: 0;
     align-items: center;
-    
 }
 
 li {
@@ -54,16 +53,6 @@ a {
 
 a:hover {
     color: #ffffff;
-     
-
-}
-
-/* Shopping Cart */
-.shopping-cart-logo {
-    color: #FFFFFF;
-    height: 4rem;
-    width: auto;
-    margin-bottom: -28px;
 }
 
 #First-Section img {
