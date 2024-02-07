@@ -10,14 +10,20 @@
     <script src="FlappyBird.js" defer></script>
 </head>
 <body>
-    <div class="background"></div>
-    <img src="flappybird images/Bird.png" alt="bird-img" class="bird" id="bird-1">
-    <div class="message">
-        Enter To Start Game <p><span style="color: red;">&uarr;</span> ArrowUp to Control</p>
+    <div class="game-container">
+        <button id="backButton" class="back-button">&#60;</button>
+        
+        <div class="background"></div>
+        <img src="flappybird images/Bird.png" alt="bird-img" class="bird" id="bird-1">
+        <div class="message">
+            Enter To Start Game <p><span style="color: red;">&uarr;</span> ArrowUp to Control</p>
+        </div>
+        <div class="score">
+            <span class="score_title"></span>
+            <span class="score_val"></span>
+        </div>
     </div>
-    <div class="score">
-        <span class="score_title"></span>
-        <span class="score_val"></span>
-    </div>
+
+    
 </body>
 </html>

@@ -127,3 +127,9 @@ function play(){
     }
     requestAnimationFrame(create_pipe);
 }
+
+//back button javascript
+
+document.getElementById('backButton').addEventListener('click', function() {
+    window.location.href = 'games.html';
+});
