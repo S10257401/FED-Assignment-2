@@ -91,6 +91,12 @@
     bottom: 10px; /* Adjust the bottom position as needed */
     left: 10px; /* Adjust the left position as needed */
     z-index: 999; /* Adjust the z-index as needed to make sure it's on top */
+    background-color: #007bff; /* Adjust background color */
+    color: #fff; /* Adjust text color */
+    font-size: 36px; /* Adjust font size */
+    width: 100px; /* Adjust width */
+    height: 100px; /* Adjust height */
+    border-radius: 50%; /* Make it a circle */
+    border: none; /* Remove border */
+    cursor: pointer;
 }
-
-/* Your existing styles for .background, .bird, .message, and .score go here */
