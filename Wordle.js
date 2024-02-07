@@ -205,3 +205,8 @@ function update() {
     col = 0; //start at 0 for new row
 }
 
+// script for the back button
+
+document.getElementById('backButton').addEventListener('click', function() {
+    window.location.href = 'games.html';
+});
