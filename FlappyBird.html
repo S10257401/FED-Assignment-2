@@ -10,6 +10,8 @@
     <script src="FlappyBird.js" defer></script>
 </head>
 <body>
+    <button id="backButton">Go Back</button>
+
     <div class="background"></div>
     <img src="flappybird images/Bird.png" alt="bird-img" class="bird" id="bird-1">
     <div class="message">
@@ -19,5 +21,11 @@
         <span class="score_title"></span>
         <span class="score_val"></span>
     </div>
+
+    <script>
+        document.getElementById('backButton').addEventListener('click', function() {
+            window.location.href = 'games.html';
+        });
+    </script>
 </body>
 </html>
