@@ -81,3 +81,16 @@
 		width: 14vw;
 	}
 }
+
+.game-container {
+    position: relative;
+}
+
+#backButton {
+    position: absolute;
+    bottom: 10px; /* Adjust the bottom position as needed */
+    left: 10px; /* Adjust the left position as needed */
+    z-index: 999; /* Adjust the z-index as needed to make sure it's on top */
+}
+
+/* Your existing styles for .background, .bird, .message, and .score go here */
