@@ -1,5 +1,70 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+body {
+    background-color: #ee4d2d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.payment-heading {
+    text-align: center;
+    margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+.payment-heading h2 {
+    font-family: "Poppins", sans-serif;
+    margin-top: 0; /* Remove default top margin */
+    font-size: 40px; /* Adjust font size as needed */
+}
+
+.payment-container {
+    background-color: white;
+    padding: 20px 200px 90px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.price {
+    text-align: center;
+}
+
+#totalPrice {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+button {
+    background-color: #EE4d2d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 body {
     background-color: #ee4d2d;
@@ -10,10 +75,42 @@ body {
     margin: 0;
 }
 
+.payment-heading {
+    text-align: center;
+    margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+.payment-heading h2 {
+    font-family: "Poppins", sans-serif;
+    margin-top: 0; /* Remove default top margin */
+    font-size: 40px; /* Adjust font size as needed */
+}
+
 .payment-container {
     background-color: white;
-    padding: 90px 400px;
+    padding: 20px 200px 90px;
     border-radius: 10px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.price {
     text-align: center;
 }
 
@@ -23,10 +120,111 @@ body {
 }
 
 button {
-    background-color: #4CAF50;
+    background-color: #EE4d2d;
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-family: "Poppins", sans-serif;
+
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    background-color: #ee4d2d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.payment-heading {
+    text-align: center;
+    margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+.payment-heading h2 {
+    font-family: "Poppins", sans-serif;
+    margin-top: 0; /* Remove default top margin */
+    font-size: 40px; /* Adjust font size as needed */
+}
+
+.payment-container {
+    background-color: white;
+    padding: 20px 200px 90px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.price {
+    text-align: center;
+}
+
+#totalPrice {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+button {
+    background-color: #EE4d2d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.back-button {
+    color: #ee4d2d;
+    text-decoration: none;
+    font-size: 18px;
+    position: absolute;
+    left: 20px; 
+    top: 20px; 
+    font-family: "Poppins", sans-serif;
+
+
+}
+
+
+.hidden{
+    display: none;
+}
+
+
+
+/* Add these styles to your existing CSS */
+.payment-container {
+    position: relative; /* Set the position to relative */
+}
+
+#tickAnimation {
+    position: absolute; /* Set the position to absolute */
+    top: 70%; /* Center the animation vertically */
+    left: 42.5%; /* Center the animation horizontally */
+    width: 100px; /* Adjust the width as needed */
+    height: 100px; /* Adjust the height as needed */
+}
+

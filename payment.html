@@ -5,31 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="payment.css">
     <title>Payment Details</title>
-
 </head>
 <body>
     <div class="payment-container">
-        <h2>Payment Details</h2>
-        <p>Total: $<span id="totalPrice"></span></p>
+        <div class="payment-heading">
+            <a href="products.html" class="back-button">&lt; Back</a>
+            <h2>Payment Page</h2>
+        </div>
+
+        <div id="thankYouMessage" class="hidden">
+            <p>Thank you for your purchase <span id="thankYouName"></span></p>
+            <p>Your purchase will be delivered to <span id="thankYouAddress"></span></p>
+            <p>Payment by <span id="thankYouPaymentMethod"></span></p>
+            <div id="tickAnimation"></div>
+
+        </div>
+
+        <!-- Add this div below the thankYouMessage div -->
+
+        
+
 
         <!-- User details form -->
         <form id="paymentForm">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required><br><br>
+            <div class="input-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
 
-            <label for="address">Address:</label>
-            <textarea id="address" name="address" rows="4" required></textarea><br><br>
+            <div class="input-group">
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="4" required></textarea>
+            </div>
 
             <label for="paymentMethod">Payment Method:</label>
             <select id="paymentMethod" name="paymentMethod" required>
-                <option value="creditCard">Credit Card</option>
-                <option value="paypal">PayPal</option>
-                <!-- Add more payment methods as needed -->
+                <option value="CreditCard">Credit Card</option>
+                <option value="Paypal">PayPal</option>
+                <option value="Visa">Visa</option>
             </select><br><br>
 
+            <div class="price">
+                <p>Total: $<span id="totalPrice"></span></p>
+            </div>
+
             <button type="button" onclick="buyNow()">Buy Now</button>
+            
         </form>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.8/lottie.min.js"></script>
 
     <script src="payment.js"></script>   
 </body>
