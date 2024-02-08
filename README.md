@@ -1,1 +1,3 @@
 Github pages link : https://s10257401.github.io/FED-Assignment-2/
+
+Video Link : https://connectnpedu-my.sharepoint.com/personal/s10258483_connect_np_edu_sg/_layouts/15/stream.aspx?id=%2Fpersonal%2Fs10258483%5Fconnect%5Fnp%5Fedu%5Fsg%2FDocuments%2FRecordings%2FMeeting%20with%20Xavier%20Lian%20Hee%20Jee%20%5FIT%2D20240208%5F232913%2DMeeting%20Recording%2Emp4&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview
