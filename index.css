@@ -110,6 +110,8 @@ a:hover {
     text-align: left; /* Center the heading */
     padding-left: 300px;
     margin-top: 0px;
+    font-family: "Poppins",sans-serif;   
+
 
 }
 
@@ -139,6 +141,8 @@ a:hover {
     border: 2px solid lightgrey;
     margin: 20px 0; /* Adjust the margin as needed */
     box-sizing: border-box;
+    font-family: "Poppins",sans-serif;   
+
 }
 
 .Product-Category-Container a {
@@ -224,6 +228,8 @@ a:hover {
     margin-left: 300px;
     margin-bottom: -270px;
     margin-top: -50px;
+    font-family: "Poppins",sans-serif;   
+
 }
 
 .Product-Slider-Container {
