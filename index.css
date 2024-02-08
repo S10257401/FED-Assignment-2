@@ -360,6 +360,10 @@ a:hover {
     flex-wrap: wrap; /* Allow child elements to wrap to the next line */
 }
 
+.Orange-Line {
+    margin-bottom: -120px;
+}
+
 .Modes-Of-Payment,
 .Logistic-Options {
     display: flex;
@@ -371,13 +375,15 @@ a:hover {
 }
 
 .payment-heading {
-    margin-bottom: 10px; /* Adjust this value as needed for the spacing */
+    margin-top: 200px; /* Adjust this value as needed for the spacing */
     text-align: center;
+    font-size: 35px;
 }
 
 .logistic-heading {
-    margin-bottom: 30px; /* Adjust this value as needed for the spacing */
+    margin-top: 200px; /* Adjust this value as needed for the spacing */
     text-align: center;
+    font-size: 35px;
 }
 
 .payment-logos,
@@ -393,17 +399,30 @@ a:hover {
     width: 80px; /* Set the desired width for both payment and logistics logos */
     height: auto;
     margin: 0 10px 10px 0px; /* Adjust the last value for bottom margin */
+    padding: 10px;
 }
 
 /* Additional styles for better alignment */
 .Logistic-Options {
     margin-top: 20px; /* Adjust this value for spacing between payment and logistics sections */
+    width: 100px;
+}
+
+.Modes-Of-Payment {
+    width: 100px;
 }
 
 .Socials {
     align-items: center;
     padding-top: 0px;
     text-align: center;
+    margin-top: 194px;
+    width: 200px;
+    margin-right: 400px;
+}
+
+.Socials h1 {
+    font-size: 35px;
 }
 
 .Socials a {
@@ -419,5 +438,25 @@ a:hover {
 }
 
 .Shopee-QR-Code {
-    font-size: 18px;
+    font-size: 22px;
+    margin-top: -432px;
+    margin-left: 720px;
 }
+
+.fa-youtube,
+.fa-instagram,
+.fa-tiktok,
+.fa-linkedin-in {
+    margin: -20px;
+}
+
+.qr-code {
+    height: 50vh;
+    width: auto;
+    margin-left: 720px;
+
+}
+
+
+
+

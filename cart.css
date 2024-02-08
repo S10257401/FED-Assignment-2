@@ -23,7 +23,6 @@ body{
     position: fixed; /* Position it relative to the viewport */
     right: 0; /* Adjust positioning */
     top: 0; /* Adjust positioning */
-    border: solid 1px blue; 
     padding: 10px;
 }
 
@@ -73,14 +72,15 @@ h2{
     border-bottom: solid 1px lightgray;   
 }
   
-.cart-item img{
+.cart-item img {
     width: 80%;
     height: auto;
 }
 
 .cart-item .details{
+    margin-top: 60px;
     padding-left: 10%;
-}
+}   
   
 .cart-item h3{
     text-align: left; 
