@@ -173,8 +173,7 @@ function openProductPage(category) {
 const wrapper = document.querySelector('.wrapper');
 const loginLink = document.querySelector('.login-link');
 const registerLink = document.querySelector('.register-link');
-const loginForm = document.getElementById('loginForm');
-const registerForm = document.getElementById('registerForm');
+ 
 
 
 registerLink.addEventListener('click', () => {
@@ -185,58 +184,58 @@ loginLink.addEventListener('click', () => {
     wrapper.classList.remove('active');
 });
 
-document.getElementById('registerForm').addEventListener('submit', async (event) => {
-  event.preventDefault();
 
-  const username = document.getElementById('username').value;
-  const email = document.getElementById('email').value;
-  const password = document.getElementById('password').value;
 
-  try {
-      const response = await fetch('http://localhost:3000/register', {
-          method: 'POST',
-          headers: {
-              'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ username, email, password }),
-      });
 
-      if (response.ok) {
-          alert('User registered!');
-          // Optionally clear the registration form after successful registration
-          document.getElementById('registerForm').reset();
-      } else {
-          alert('Failed to register user');
-      }
-  } catch (error) {
-      console.error(error);
-      alert('An error occurred during registration');
-  }
-});
 
-document.getElementById('loginForm').addEventListener('submit', async (event) => {
-  event.preventDefault();
+// Function to register a user using jQuery
+function registerUser(username, email, password) {
+    const jsonData = {
+        "Username": username,
+        "Email": email,
+        "Password": password
+    };
 
-  const email = document.getElementById('loginEmail').value;
-  const password = document.getElementById('loginPassword').value;
+    const settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://loginpage-e1d4.restdb.io/rest/contact",
+        "method": "POST",
+        "headers": {
+            "content-type": "application/json",
+            "x-apikey": "65c39f2fbd653338ae1136bc", // Replace with your actual CORS API key
+            "cache-control": "no-cache"
+        },
+        "processData": false,
+        "data": JSON.stringify(jsonData)
+    };
 
-  try {
-      const response = await fetch('http://localhost:3000/login', {
-          method: 'POST',
-          headers: {
-              'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ email, password }),
-      });
+    $.ajax(settings)
+        .done(function (response) {
+            console.log(response);
+            // Assuming response contains the registered user details
+            // You can handle the response as needed (e.g., show a success message, update UI, etc.)
+            showUserRegisteredMessage();
+        })
+        .fail(function (error) {
+            console.error('Registration failed:', error);
+            // Handle registration failure (e.g., show an error message, log the error, etc.)
+        });
+}
 
-      if (response.ok) {
-          const user = await response.json();
-          alert(`Login successful! Welcome, ${user.username}`);
-      } else {
-          alert('Invalid email or password');
-      }
-  } catch (error) {
-      console.error(error);
-      alert('An error occurred during login');
-  }
+// Function to display "User Registered" message
+function showUserRegisteredMessage() {
+    alert('User registered successfully!');
+    // Replace with your preferred way of displaying a message (e.g., update DOM, show modal, etc.)
+}
+
+// Event listener for register form submission
+document.querySelector('.form-box.register form').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const username = document.querySelector('.form-box.register input[type="text"]').value;
+    const email = document.querySelector('.form-box.register input[type="email"]').value;
+    const password = document.querySelector('.form-box.register input[type="password"]').value;
+
+    registerUser(username, email, password);
 });
