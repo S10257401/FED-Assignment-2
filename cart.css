@@ -28,7 +28,7 @@ body{
 
 .cart-popup {
     position: fixed;
-    top: 17vh;
+    top: 16.5vh;
     right: -300px; /* Initially off-screen to the right */
     width: 300px;
     height: 100%;
