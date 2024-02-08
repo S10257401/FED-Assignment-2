@@ -358,6 +358,8 @@ a:hover {
 .Footer-Section {
     display: flex;
     flex-wrap: wrap; /* Allow child elements to wrap to the next line */
+    font-family: "Poppins",sans-serif;   
+
 }
 
 .Orange-Line {
@@ -439,8 +441,10 @@ a:hover {
 
 .Shopee-QR-Code {
     font-size: 22px;
-    margin-top: -432px;
+    margin-top: -445px;
     margin-left: 720px;
+    font-family: "Poppins",sans-serif;   
+
 }
 
 .fa-youtube,
@@ -454,6 +458,7 @@ a:hover {
     height: 50vh;
     width: auto;
     margin-left: 720px;
+    
 
 }
 

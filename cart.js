@@ -1,122 +1,122 @@
-/* class CartItem{
-    constructor(name, img, price){
-        this.name = name
-        this.desc = desc
-        this.img = img
-        this.price = price
-        this.quantity = 1
-    }
-}
-
-
-class LocalCart{
-    static key = 'flex-item'
-
-    static get LocalCartItems(){
-        let cartMap = new Map()
-        const cart  = localStorage.getItem(key)
-        if(cart===null || cart.length===0) return cartMap
-            return new Map(Object.entries(JSON.parse(cart)))
-    }
-
-    static addItemToLocalCart(id, item){
-        let cart = LocalCart.getLocalCartItems()
-        if(cart.has(id)){
-            let mapItem = cart.get(id)
-            mapItem.quantity += 1
-            cart.set(id, mapItem)
-        }
-        else 
-        cart.set(id, item)
-        localStorage.setItem(LocalCart.key, Json.stringify(object.fromEntries(cart)))
-        updateCartUI()
-    }
-    static removeItemFromCart(id){
-        let cart = LocalCart.getLocalCartItems()
-        if(cart.has(id)){
-            let mapItem = cart.get(id)
-            if(mapItem.quantity>1)
-            {
-                mapItem.quantity -=1
-                cart.set(id, mapItem)
-            }
-            else 
-            cart.delete(id)
-        }
-        if(cart.length===0)
-        localStorage.clear()
-        else 
-        localStorage.Storage.setItem(LocalCart.key, JSON.stringify(Object.fromEntries(cart)))
-            updateCartUI()
-    }
-}
-*/
-const cartIcon = document.querySelector('.fa-cart-arrow-down')
-const wholeCartWindow = document.querySelector('.whole-cart-window')
-wholeCartWindow.inWindow = 0
-const addToCartButton = document.querySelectorAll('.addToCartButton')
-addToCartButton.forEach((btn)=>{
-    btn.addEventListener('click', addItemFunction)
-})
-
-function addItemFunction(e){
-    const id = e.target.parentElement.parentElement.getAttribute("data-id")
-    const img = e.target.parentElement.parentElement.previousElement.Sibling.src
-    const name = e.target.parentElement.previousElement.Sibling.textContent
-    const desc = e.target.parentElement.previousElement.children[0].textContent
-    const price = e.target.parentElement.children[1].textContent
-    price = price.replace("Price: $", '')
-    const item = new CartItem(name, desc, img, price)
-}
-
-
-cartIcon.addEventListener('mouseover', ()=>{
-    if(wholeCartWindow.classList.contains('hide'))
-    wholeCartWindow.classList.remove('hide')
-})
-
-cartIcon.addEventListener('mouseleave', ()=>{
-    //if(wholeCartWindow.classList.contains('hide'))
-    setTimeout( () =>{
-        if(wholeCartWindow.inWindow===0){
-            wholeCartWindow.classList.add('hide')
-        }
-    },300)
-
-})
-
-wholeCartWindow.addEventListener('mouseover', ()=>{
-    wholeCartWindow.inWindow=1
-})
-
-wholeCartWindow.addEventListener('mouseleave', ()=>{
-    wholeCartWindow.inWindow=0
-    wholeCartWindow.classList.add('hide')
-})
-
-/* function updateCartUI(){
-    const cartWrapper = document.querySelector('.cart-wrapper')
-    cartWrapper.innerHTML=""
-    const items = LocalCart.getLocalCartItems('cartItems')
-    if(items === null) return
-    let count = 0 
-    let total = 0 
-    for(const [key, value] of items.entries()){
-        const cartItem = document.createElement('div')
-        cartItem.classList.add('cart-item')
-        cartItem.innerHTML = `
+function filterItems() {
+    const categoryFilter = document.getElementById('categoryFilter');
+    const selectedCategory = categoryFilter.value;
+    
+    const items = document.querySelectorAll('.flex-item');
+  
+    items.forEach(item => {
+        const category = item.dataset.category.toLowerCase();
         
-        <div class="flex-img">
-				<img src="images/Razer Hunstman Mini KeyBoard.jpg">
-            </div>
-            <div class="flex-info">
-                <h4>${value.name}</h4>
-                <p>${value.desc}</p>
-                <span class="quantity>Quantity: ${value.quantity}</span>
-                <span class="price>Price: $ ${value.price*value.quantity}</span>
-            
-            </div>`
+        if (selectedCategory === 'all' || category === selectedCategory) {
+            item.style.display = 'flex';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+  }
+  
+  //// cart pop up
+  document.addEventListener('DOMContentLoaded', function () {
+      const cartIcon = document.getElementById('cart-icon');
+      const cartPopup = document.getElementById('cart-popup');
+  
+      cartIcon.addEventListener('click', function () {
+          // Toggle the visibility of the cart popup by adjusting the right property
+          cartPopup.style.right = cartPopup.style.right === '0px' ? '-300px' : '0px';
+      });
+  });
+
+
+//// Close cart button
+
+function closeCartPopup() {
+    const cartPopup = document.getElementById('cart-popup');
+    cartPopup.style.right = '-300px'; // Close the cart popup by moving it off-screen
+}
+
+// Initialize the cart popup when the page loads
+document.addEventListener('DOMContentLoaded', function () {
+    updateCartPopup();
+
+    // Add an event listener to the close button
+    const closeBtn = document.getElementById('close-cart-popup-btn');
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeCartPopup);
+    }
+});
+
+
+
+// cart.js
+
+let cart = [];
+
+function addToCart(productId, productName, productPrice) {
+    const item = {
+        id: productId,
+        name: productName,
+        price: productPrice,
+    };
+
+    cart.push(item);
+    updateCartPopup();
+}
+
+function removeCartItem(index) {
+    cart.splice(index, 1);
+    updateCartPopup();
+}
+
+function updateCartPopup() {
+    const cartPopup = document.getElementById('cart-popup');
+
+    // Clear previous content
+    cartPopup.innerHTML = `
+        <button id="close-cart-popup-btn" onclick="closeCartPopup()">&times;</button>
+        <h2>Your Cart</h2>
+        <hr />
+    `;
+
+    // Display "Your cart is empty" message above the line
+    if (cart.length === 0) {
+        const emptyCartMessage = document.createElement('p');
+        emptyCartMessage.textContent = 'Your cart is empty.';
+        cartPopup.appendChild(emptyCartMessage);
+    } else {
+        // Display cart items above the line with rubbish bin icons
+        cart.forEach((item, index) => {
+            const itemElement = document.createElement('p');
+            itemElement.innerHTML = `
+                ${item.name} - $${item.price}
+                <i class="fas fa-trash-alt remove-icon" onclick="removeCartItem(${index})"></i>
+            `;
+            cartPopup.appendChild(itemElement);
+        });
     }
 
+    // Add a line after cart items or the message
+    const lineElement = document.createElement('hr');
+    cartPopup.appendChild(lineElement);
+
+    // Display total price and checkout button below the line
+    const totalPriceElement = document.createElement('div');
+    totalPriceElement.className = 'total-price';
+    totalPriceElement.textContent = `Total: $${calculateTotalPrice()}`;
+    cartPopup.appendChild(totalPriceElement);
+
+    const checkoutButton = document.createElement('button');
+    checkoutButton.className = 'checkout-btn';
+    checkoutButton.textContent = 'Checkout';
+    cartPopup.appendChild(checkoutButton);
 }
-*/
+
+function calculateTotalPrice() {
+    return cart.reduce((total, item) => total + item.price, 0).toFixed(2);
+}
+
+function closeCartPopup() {
+    const cartPopup = document.getElementById('cart-popup');
+    cartPopup.style.right = '-300px';
+}
+
+// Add more functions as needed for your application

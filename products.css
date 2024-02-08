@@ -63,6 +63,98 @@ a:hover {
 
 }
 
+#cart-icon:hover {
+    cursor: pointer;
+}
+
+#cart-icon, .cart-icon {
+    color: white; /* Set cart icon color to white */
+    font-size: 55px; /* Adjust the font size as needed */
+    margin-left: 70px; /* Move the cart icon to the right */
+}
+
+.cart-popup {
+    position: fixed;
+    top: 17vh;
+    right: -300px; /* Initially off-screen to the right */
+    width: 300px;
+    height: 100%;
+    max-height: 700px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1001;
+    transition: right 0.3s ease; /* Smooth transition effect */
+    font-family: "Poppins", sans-serif; /* Use the font from the navigation bar */
+    text-align: center; /* Center the text */
+    overflow-y: auto;
+
+}
+
+.cart-popup h2 {
+    font-size: 30px; /* Adjust the font size as needed */
+    margin-bottom: 10px; /* Add some space below the heading */
+}
+
+.cart-popup hr {
+    border: 0.5px solid #ee4d2d; /* Adjust the border color and thickness as needed */
+    margin: 15px 0; /* Add some margin above and below the line */
+}
+
+.cart-popup .total-price {
+    font-size: 18px; /* Adjust the font size as needed */
+    margin: 10px 0; /* Add some margin above and below the total price */
+
+}
+
+.cart-popup .checkout-btn {
+    background-color: #EE4D2D; /* Orange color */
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%; /* Make the button fill the width */
+    margin-top: 10px; /* Add some margin above the button */
+}
+
+#close-cart-popup-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #EE4D2D; /* Orange color */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Add this CSS for styling the remove icon */
+.remove-icon {
+    margin-left: 10px; /* Adjust the margin as needed to move the icon to the right */
+    cursor: pointer;
+}
+
+.remove-icon:hover {
+    color: #EE4D2D; /* Change to the desired color on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .Product-Category-Heading {
     font-size: 18px; /* Add 'px' to specify font size */
     text-align: center; /* Center the heading */
@@ -122,6 +214,7 @@ a:hover {
     font-weight: bold;
     font-size: 1.2em;
     margin-bottom: 45px; /* Adjust the bottom margin as needed */
+    
 }
 
 @media (max-width: 920px) {
@@ -143,6 +236,7 @@ img {
     width: 120px; /* Set a fixed width for the button */
     transition: background-color 0.3s ease; /* Add a transition for the background color */
     margin-bottom: -100px;
+    margin-top: 20px;
 }
 
 .addToCartButton:hover {

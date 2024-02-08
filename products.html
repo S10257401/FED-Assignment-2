@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <script src="https://kit.fontawesome.com/8f27d68390.js" crossorigin="anonymous"></script>
     
-    <script src="script.js"></script>
+    
+
     <title>Shopee website</title>
 </head>
 <body>
@@ -20,45 +21,20 @@
                 <li><a href="products.html">Products</a></li>
                 <li><a href="games.html">Games</a></li>                     
                 <li class="active"><a href="login.html">Log in</a></li>
-                <div class="cart-box">
-                    <div class="cart-icon"><i class="fas fa-cart-arrow-down fa-3x non-empty"></i></div>
-                    <div class="whole-cart-window hide">
-                        <h2> Shopping Cart</h2>
-                        <div class="cart-wrapper">   
-                            <div class="cart-item"> 
-                                <img src="images/Baggy Jeans Men.jpeg">
-                                <div class="details">
-                                    <h3>Item Name</h3> 
-                                    <p>Item Description
-                                    <span class="quantity">Quantity: 1</span>
-                                        <span class="price">Price: $0.00 </span>
-                                    </p>
-                                </div>    
-                                <div class="cancel"><i class="fas fa-window-close"></i></div>
-                            </div> 
-
-                        <div class="cart-item"> 
-                            <img src="images/Baggy Jeans Men.jpeg">
-                            <div class="details">
-                                <h3>Item Name</h3> 
-                                <p>Item Description
-                                <span class="quantity">Quantity: 1</span>
-                                    <span class="price">Price: $0.00 </span>
-                                </p>
-                            </div>    
-                            <div class="cancel"><i class="fas fa-window-close"></i></div>
-                        </div>
-                    </div>
-                        <div class="subtotal">Subtotal: $0.00</div>
-                        <div class="checkout">Checkout</div>
-                        <div class="view-cart">View Cart</div> 
-                </div>
+                <li id="cart-icon"><i class="fas fa-shopping-cart"></i></li>
 
             </ul>
         </nav>
     </section>
 
+    <div class="cart-popup" id="cart-popup">
+        <button id="close-cart-popup-btn" onclick="closeCartPopup()">&times;</button> <!-- Close button added here -->
+        <h2>Your Cart</h2>
+        <hr /> <!-- Line added here -->
+        <div class="total-price">Total: $0.00</div> <!-- Total price added here -->
+        <button class="checkout-btn">Checkout</button>
 
+    </div>
     
     <div class="Product-Category-Heading"><h1>Products</h1></div>
 
@@ -74,15 +50,17 @@
         </select>
     </div>
 
+
+
     <section class="container">
 		<div class="flex-item" data-category="computer and peripherals" data-id ="1">
 			<div class="flex-img">
 				<img src="images/Razer Hunstman Mini KeyBoard.jpg">
             </div>
             <div class="flex-info">
-                <h4>Razer Hunstman Mini - Black</h4>
+                <h4>Razer Hunstman Mini</h4>
                 <p>$189.00</p>
-                <button class="addToCartButton" onclick="addToCart('product1', 'Ricky Tee - Black', 30.00)">Add to Cart</button>
+                <button class="addToCartButton" onclick="addToCart('product1', 'Razer Huntsman Mini', 189.00)">Add to Cart</button>
             </div>
         </div>
 
@@ -93,7 +71,7 @@
             <div class="flex-info">
                 <h4>Shelves</h4>
                 <p>$99.00</p>
-                <button class="addToCartButton" onclick="addToCart('product1', 'Ricky Tee - Black', 30.00)">Add to Cart</button>
+                <button class="addToCartButton" onclick="addToCart('product1', 'Shelves', 99.00)">Add to Cart</button>
             </div>
         </div>
 
@@ -104,7 +82,7 @@
             <div class="flex-info">
                 <h4>Classic Band Shirt</h4>
                 <p>$25.00</p>
-                <button class="addToCartButton" onclick="addToCart('product1', 'Ricky Tee - Black', 30.00)">Add to Cart</button>
+                <button class="addToCartButton" onclick="addToCart('product1', 'Classic Band Shirt', 25.00)">Add to Cart</button>
             </div>
         </div>
 
@@ -113,9 +91,9 @@
 				<img src="images/Logitech Gpro Superlight.jpg">
             </div>
             <div class="flex-info">
-                <h4>Logitech GPro X Superlight</h4>
+                <h4>Logitech Mouse</h4>
                 <p>$229.00</p>
-                <button class="addToCartButton" onclick="addToCart('product1', 'Ricky Tee - Black', 30.00)">Add to Cart</button>
+                <button class="addToCartButton" onclick="addToCart('product1', 'Logitech Mouse', 229.00)">Add to Cart</button>
             </div>
         </div>
 
@@ -126,7 +104,7 @@
             <div class="flex-info">
                 <h4>Smart Watch</h4>
                 <p>$120.00</p>
-                <button class="addToCartButton" onclick="addToCart('product1', 'Ricky Tee - Black', 30.00)">Add to Cart</button>
+                <button class="addToCartButton" onclick="addToCart('product1', 'Smart Watch', 120.00)">Add to Cart</button>
             </div>
         </div>
 
@@ -135,9 +113,9 @@
 				<img src="images/Gaming PC.jpeg">
             </div>
             <div class="flex-info">
-                <h4>RTX 4060Ti Gaming Pc</h4>
+                <h4>Gaming Computer</h4>
                 <p>$1369.00</p>
-                <button class="addToCartButton" onclick="addToCart('product1', 'Ricky Tee - Black', 30.00)">Add to Cart</button>
+                <button class="addToCartButton" onclick="addToCart('product1', 'Gaming Computer', 1369.00)">Add to Cart</button>
             </div>
         </div>
 
@@ -148,7 +126,7 @@
             <div class="flex-info">
                 <h4>LIGE Watch</h4>
                 <p>$79.00</p>
-                <button class="addToCartButton" onclick="addToCart('product1', 'Ricky Tee - Black', 30.00)">Add to Cart</button>
+                <button class="addToCartButton" onclick="addToCart('product1', 'LIGE Watch', 79.00)">Add to Cart</button>
             </div>
         </div>
 
@@ -159,7 +137,7 @@
             <div class="flex-info">
                 <h4>Wood Tissue Box</h4>
                 <p>$19.00</p>
-                <button class="addToCartButton" onclick="addToCart('product1', 'Ricky Tee - Black', 30.00)">Add to Cart</button>
+                <button class="addToCartButton" onclick="addToCart('product1', 'Wood Tissue Box', 19.00)">Add to Cart</button>
             </div>
         </div>
 
@@ -170,7 +148,7 @@
             <div class="flex-info">
                 <h4>Oxford Boots</h4>
                 <p>$45.00</p>
-                <button class="addToCartButton" onclick="addToCart('product1', 'Ricky Tee - Black', 30.00)">Add to Cart</button>
+                <button class="addToCartButton" onclick="addToCart('product1', 'Oxford Boots', 45.00)">Add to Cart</button>
             </div>
         </div>
 
@@ -181,7 +159,7 @@
             <div class="flex-info">
                 <h4>Plaid Pants</h4>
                 <p>$17.46</p>
-                <button class="addToCartButton" onclick="addToCart('product1', 'Ricky Tee - Black', 30.00)">Add to Cart</button>
+                <button class="addToCartButton" onclick="addToCart('product1', 'Plaid Pants', 17.46)">Add to Cart</button>
             </div>
         </div>
 
@@ -192,7 +170,7 @@
             <div class="flex-info">
                 <h4>Logitech MousePad</h4>
                 <p>$43.16</p>
-                <button class="addToCartButton" onclick="addToCart('product1', 'Ricky Tee - Black', 30.00)">Add to Cart</button>
+                <button class="addToCartButton" onclick="addToCart('product1', 'Logitech MousePad', 43.16)">Add to Cart</button>
             </div>
         </div>
 
@@ -201,9 +179,9 @@
 				<img src="images/Foldable Storage Box.jpeg">
             </div>
             <div class="flex-info">
-                <h4>Foldable Storage Box</h4>
+                <h4>Storage Box</h4>
                 <p>$30.00</p>
-                <button class="addToCartButton" onclick="addToCart('product1', 'Ricky Tee - Black', 30.00)">Add to Cart</button>
+                <button class="addToCartButton" onclick="addToCart('product1', 'Storage Box', 30.00)">Add to Cart</button>
             </div>
         </div>
 
@@ -212,9 +190,9 @@
 				<img src="images/Men's Leather Shoes.jpeg">
             </div>
             <div class="flex-info">
-                <h4>Men's Leather Shoes</h4>
+                <h4>Leather Shoes</h4>
                 <p>$110.00</p>
-                <button class="addToCartButton" onclick="addToCart('product1', 'Ricky Tee - Black', 30.00)">Add to Cart</button>
+                <button class="addToCartButton" onclick="addToCart('product1', 'Leather Shoes', 110.00)">Add to Cart</button>
             </div>
         </div>
 
@@ -223,9 +201,9 @@
 				<img src="images/Apple Watch Series 9.jpeg">
             </div>
             <div class="flex-info">
-                <h4>Apple Watch Series 9</h4>
+                <h4>Apple Watch</h4>
                 <p>$515.00</p>
-                <button class="addToCartButton" onclick="addToCart('product1', 'Ricky Tee - Black', 30.00)">Add to Cart</button>
+                <button class="addToCartButton" onclick="addToCart('product1', 'Apple Watch', 515.00)">Add to Cart</button>
             </div>
         </div>
 
@@ -234,9 +212,9 @@
 				<img src="images/Baggy Jeans Men.jpeg">
             </div>
             <div class="flex-info">
-                <h4>Baggy Jeans Men</h4>
+                <h4>Baggy Jeans</h4>
                 <p>$14.50</p>
-                <button class="addToCartButton" onclick="addToCart('product1', 'Ricky Tee - Black', 30.00)">Add to Cart</button>
+                <button class="addToCartButton" onclick="addToCart('product1', 'Baggy Jeans', 14.50)">Add to Cart</button>
             </div>
         </div>
 
@@ -245,9 +223,9 @@
 				<img src="images/Shoe Rack with Seat.jpeg">
             </div>
             <div class="flex-info">
-                <h4>Shoe Rack with Seat</h4>
+                <h4>Shoe Rack</h4>
                 <p>$54.30</p>
-                <button class="addToCartButton" onclick="addToCart('product1', 'Ricky Tee - Black', 30.00)">Add to Cart</button>
+                <button class="addToCartButton" onclick="addToCart('product1', 'Shoe Rack', 54.30)">Add to Cart</button>
             </div>
         </div>
 
@@ -256,9 +234,9 @@
 				<img src="images/All Star Converse Shoes.jpeg">
             </div>
             <div class="flex-info">
-                <h4>All Star Converse Shoes</h4>
+                <h4>Converse Shoes</h4>
                 <p>$95.00</p>
-                <button class="addToCartButton" onclick="addToCart('product1', 'Ricky Tee - Black', 30.00)">Add to Cart</button>
+                <button class="addToCartButton" onclick="addToCart('product1', 'Converse Shoes', 95.00)">Add to Cart</button>
             </div>
         </div>
 
@@ -267,9 +245,9 @@
 				<img src="images/Wooden Keyboard Rest.jpeg">
             </div>
             <div class="flex-info">
-                <h4>Wooden Keyboard Rest</h4>
+                <h4>Keyboard Rest</h4>
                 <p>$35.00</p>
-                <button class="addToCartButton" onclick="addToCart('product1', 'Ricky Tee - Black', 30.00)">Add to Cart</button>
+                <button class="addToCartButton" onclick="addToCart('product1', 'Keyboard Rest', 35.00)">Add to Cart</button>
             </div>
         </div>
 
@@ -278,24 +256,15 @@
 				<img src="images/Oversized Unisex Graphic Tee.jpeg">
             </div>
             <div class="flex-info">
-                <h4>Oversized Unisex Graphic Tee</h4>
+                <h4>Graphic Tee</h4>
                 <p>$35.00</p>
-                <button class="addToCartButton" onclick="addToCart('product1', 'Ricky Tee - Black', 30.00)">Add to Cart</button>
-            </div>
+                <button class="addToCartButton" onclick="addToCart('product1', 'Graphic Tee', 35.00)">Add to Cart</button>
+            </div> 
         </div>
 
         <!-- Repeat similar blocks for other products -->
 
-        <div class="flex-item" data-category="home and living">
-			<div class="flex-img">
-				<img src="images/">
-            </div>
-            <div class="flex-info">
-                <h4>Wooden Keyboard Rest</h4>
-                <p>$35.00</p>
-                <button class="addToCartButton" onclick="addToCart('product1', 'Ricky Tee - Black', 30.00)">Add to Cart</button>
-            </div>
-        </div>
+        
 
         
         
