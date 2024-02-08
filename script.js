@@ -84,6 +84,11 @@ const initSlider = () => {
 
 window.addEventListener("load", initSlider)
 
+//// Linking images on the Popular Products Slider to products page
+function redirectToProductsPage() {
+    window.location.href = "products.html";
+}
+
 
 
 //// Dropdown Filter For Product Page 
