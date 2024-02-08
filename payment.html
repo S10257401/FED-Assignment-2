@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="products.css">
+    <title>Payment Details</title>
+    
+</head>
+<body>
+    <div class="payment-container">
+        <h2>Payment Details</h2>
+        <p>Total: $<span id="totalPrice"></span></p>
+
+        <!-- User details form -->
+        <form id="paymentForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="4" required></textarea><br><br>
+
+            <label for="paymentMethod">Payment Method:</label>
+            <select id="paymentMethod" name="paymentMethod" required>
+                <option value="creditCard">Credit Card</option>
+                <option value="paypal">PayPal</option>
+                <!-- Add more payment methods as needed -->
+            </select><br><br>
+
+            <p>Total: $<span id="totalPrice"></span></p>
+            <button type="button" onclick="buyNow()">Buy Now</button>
+        </form>
+    </div>
+
+    <script src="payment.js"></script>   
+</body>
+</html>

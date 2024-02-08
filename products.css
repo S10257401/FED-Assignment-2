@@ -98,7 +98,7 @@ a:hover {
 
 .cart-popup hr {
     border: 0.5px solid #ee4d2d; /* Adjust the border color and thickness as needed */
-    margin: 15px 0; /* Add some margin above and below the line */
+    margin: 0; /* Add some margin above and below the line */
 }
 
 .cart-popup .total-price {
@@ -129,6 +129,50 @@ a:hover {
     font-size: 20px;
     cursor: pointer;
 }
+
+.payment-popup {
+    display: none;
+    position: fixed;
+    top: 17vh;
+    right: -300px;
+    width: 300px;
+    max-height: 400px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1001;
+    transition: right 0.3s ease;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+}
+
+.payment-popup h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.payment-popup hr {
+    border: 0.5px solid #ee4d2d;
+    margin: 15px 0;
+}
+
+.payment-popup #subtotal {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.payment-popup .buy-now-btn {
+    background-color: #EE4D2D;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+
 
 /* Add this CSS for styling the remove icon */
 .remove-icon {

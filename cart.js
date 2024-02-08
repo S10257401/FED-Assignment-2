@@ -1,17 +1,14 @@
-//// cart pop up
-  document.addEventListener('DOMContentLoaded', function () {
-      const cartIcon = document.getElementById('cart-icon');
-      const cartPopup = document.getElementById('cart-popup');
-  
-      cartIcon.addEventListener('click', function () {
-          // Toggle the visibility of the cart popup by adjusting the right property
-          cartPopup.style.right = cartPopup.style.right === '0px' ? '-300px' : '0px';
-      });
-  });
+document.addEventListener('DOMContentLoaded', function () {
+    const cartIcon = document.getElementById('cart-icon');
+    const cartPopup = document.getElementById('cart-popup');
 
+    cartIcon.addEventListener('click', function () {
+        // Toggle the visibility of the cart popup by adjusting the right property
+        cartPopup.style.right = cartPopup.style.right === '0px' ? '-300px' : '0px';
+    });
+});
 
-//// Close cart button
-
+// Close cart button
 function closeCartPopup() {
     const cartPopup = document.getElementById('cart-popup');
     cartPopup.style.right = '-300px'; // Close the cart popup by moving it off-screen
@@ -28,20 +25,23 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-
-
-// cart.js
-
 let cart = [];
 
 function addToCart(productId, productName, productPrice) {
-    const item = {
-        id: productId,
-        name: productName,
-        price: productPrice,
-    };
+    const existingItem = cart.find(item => item.id === productId);
 
-    cart.push(item);
+    if (existingItem) {
+        existingItem.quantity = (existingItem.quantity || 1) + 1;
+    } else {
+        const newItem = {
+            id: productId,
+            name: productName,
+            price: productPrice,
+            quantity: 1,
+        };
+        cart.push(newItem);
+    }
+
     updateCartPopup();
 }
 
@@ -66,12 +66,19 @@ function updateCartPopup() {
         emptyCartMessage.textContent = 'Your cart is empty.';
         cartPopup.appendChild(emptyCartMessage);
     } else {
-        // Display cart items above the line with rubbish bin icons
+        // Display cart items above the line with quantity and rubbish bin icons
         cart.forEach((item, index) => {
-            const itemElement = document.createElement('p');
+            const itemElement = document.createElement('div');
+            itemElement.className = 'cart-item';
             itemElement.innerHTML = `
-                ${item.name} - $${item.price}
-                <i class="fas fa-trash-alt remove-icon" onclick="removeCartItem(${index})"></i>
+                <div>
+                    <p>${item.name}</p>
+                    <p>Price: $${item.price}</p>
+                    <p>Qty: ${item.quantity}</p>
+                </div>
+                <div>
+                    <i class="fas fa-trash-alt remove-icon" onclick="removeCartItem(${index})"></i>
+                </div>
             `;
             cartPopup.appendChild(itemElement);
         });
@@ -90,16 +97,61 @@ function updateCartPopup() {
     const checkoutButton = document.createElement('button');
     checkoutButton.className = 'checkout-btn';
     checkoutButton.textContent = 'Checkout';
+    checkoutButton.addEventListener('click', function () {
+        showPaymentPage(); // Redirect to payment.html
+    });
     cartPopup.appendChild(checkoutButton);
 }
 
 function calculateTotalPrice() {
-    return cart.reduce((total, item) => total + item.price, 0).toFixed(2);
+    return cart.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
 }
 
-function closeCartPopup() {
-    const cartPopup = document.getElementById('cart-popup');
-    cartPopup.style.right = '-300px';
+function showPaymentPopup() {
+    const paymentPopup = document.getElementById('payment-popup');
+    paymentPopup.style.right = '0'; // Set the right property to '0' to show the payment popup
+
+    // Display subtotal in the payment popup
+    const subtotalElement = document.getElementById('subtotal');
+    subtotalElement.textContent = `Subtotal: $${calculateTotalPrice()}`;
 }
 
-// Add more functions as needed for your application
+function buyNow() {
+    cart = [];
+    updateCartPopup();
+    showPaymentPage();
+
+    window.location.href = 'products.html';
+
+}
+
+function closePaymentPopup() {
+    const paymentPopup = document.getElementById('payment-popup');
+    paymentPopup.style.right = '-300px'; // Close the payment popup by moving it off-screen
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    updateCartPopup();
+
+    const closeBtn = document.getElementById('close-cart-popup-btn');
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeCartPopup);
+    }
+});
+
+function showPaymentPage() {
+    // Get the total price
+    const totalPrice = calculateTotalPrice();
+
+    // Create a data object with cart information
+    const cartData = {
+        total: totalPrice,
+        items: cart
+    };
+
+    // Convert the data object to a JSON string and encode it for the URL
+    const cartDataString = encodeURIComponent(JSON.stringify(cartData));
+
+    // Redirect to the payment page with the cart data as a query parameter
+    window.location.href = `payment.html?cartData=${cartDataString}`;
+}
